@@ -51,6 +51,10 @@
 		900F9A3E2AD85B5A006C1976 /* VisionOogcentrum */ = {
 			isa = PBXGroup;
 			children = (
+				FCD1C5D42ADEFB5000CF93EC /* controllers */,
+				FCD1C5D32ADEFB4A00CF93EC /* views */,
+				FCD1C5D22ADEFB3C00CF93EC /* models */,
+				FCD1C5D12ADEFB2F00CF93EC /* services */,
 				900F9A3F2AD85B5A006C1976 /* VisionOogcentrumApp.swift */,
 				900F9A412AD85B5A006C1976 /* ContentView.swift */,
 				900F9A432AD85B5A006C1976 /* Assets.xcassets */,
@@ -65,6 +69,34 @@
 				900F9A462AD85B5A006C1976 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		FCD1C5D12ADEFB2F00CF93EC /* services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = services;
+			sourceTree = "<group>";
+		};
+		FCD1C5D22ADEFB3C00CF93EC /* models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = models;
+			sourceTree = "<group>";
+		};
+		FCD1C5D32ADEFB4A00CF93EC /* views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = views;
+			sourceTree = "<group>";
+		};
+		FCD1C5D42ADEFB5000CF93EC /* controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
