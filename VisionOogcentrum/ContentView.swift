@@ -10,19 +10,22 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         TabView {
-            Text("welkom")
+            Text("Welkom")
                 .tabItem {
                     Image(systemName: "house")
                 }
-            Text("afspraken")
+            Text("Afspraken")
                 .tabItem {
-                    Image(systemName: "calendar")
+                    Image(systemName: "calendar.badge.plus")
                 }
-            Text("stel je vragen hier")
+            Text("Stel je vragen hier")
                 .tabItem {
                     Image (systemName: "text.bubble")
                 }
         }
+        .foregroundStyle(Colors.text)
+        .font(.largeTitle)
+        .accentColor(Colors.primary)
     }
 }
 
