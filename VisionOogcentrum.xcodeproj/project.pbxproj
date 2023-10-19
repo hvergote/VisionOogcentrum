@@ -11,7 +11,6 @@
 		900F9A422AD85B5A006C1976 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900F9A412AD85B5A006C1976 /* ContentView.swift */; };
 		900F9A442AD85B5A006C1976 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 900F9A432AD85B5A006C1976 /* Assets.xcassets */; };
 		900F9A472AD85B5A006C1976 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 900F9A462AD85B5A006C1976 /* Preview Assets.xcassets */; };
-		9078F0442AE00D6F002CE6B7 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9078F0432AE00D6F002CE6B7 /* Colors.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,7 +19,6 @@
 		900F9A412AD85B5A006C1976 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		900F9A432AD85B5A006C1976 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		900F9A462AD85B5A006C1976 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		9078F0432AE00D6F002CE6B7 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,8 +56,6 @@
 				FCD1C5D22ADEFB3C00CF93EC /* models */,
 				FCD1C5D12ADEFB2F00CF93EC /* services */,
 				900F9A3F2AD85B5A006C1976 /* VisionOogcentrumApp.swift */,
-				900F9A412AD85B5A006C1976 /* ContentView.swift */,
-				9078F0432AE00D6F002CE6B7 /* Colors.swift */,
 				900F9A432AD85B5A006C1976 /* Assets.xcassets */,
 				900F9A452AD85B5A006C1976 /* Preview Content */,
 			);
@@ -91,6 +87,7 @@
 		FCD1C5D32ADEFB4A00CF93EC /* views */ = {
 			isa = PBXGroup;
 			children = (
+				900F9A412AD85B5A006C1976 /* ContentView.swift */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -173,7 +170,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				900F9A422AD85B5A006C1976 /* ContentView.swift in Sources */,
-				9078F0442AE00D6F002CE6B7 /* Colors.swift in Sources */,
 				900F9A402AD85B5A006C1976 /* VisionOogcentrumApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -308,6 +304,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"VisionOogcentrum/Preview Content\"";
+				DEVELOPMENT_TEAM = QH4N3LDSXQ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -336,6 +333,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"VisionOogcentrum/Preview Content\"";
+				DEVELOPMENT_TEAM = QH4N3LDSXQ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
