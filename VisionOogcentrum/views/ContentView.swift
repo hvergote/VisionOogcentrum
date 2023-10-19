@@ -10,17 +10,8 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         VStack {
-            Text("Vision Oogcentrum")
-                .font(.title)
-                .foregroundStyle(.white)
-                .background(Color("AccentColor"))
             TabView {
-                Image("BackgroundImage")
-                    .resizable()
-                    .aspectRatio(contentMode: /*@START_MENU_TOKEN@*/.fill/*@END_MENU_TOKEN@*/)
-                    .grayscale(1)
-                    .padding(.bottom, 10)
-                    .ignoresSafeArea(edges: .top)
+                HomeView()
                     .tabItem {
                         Image(systemName: "house")
                     }
@@ -42,8 +33,4 @@ struct ContentView: View {
 
 #Preview {
     ContentView()
-}
-
-#Preview {
-    ContentView().preferredColorScheme(.dark)
 }
