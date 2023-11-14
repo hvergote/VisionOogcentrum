@@ -14,6 +14,11 @@
 		90CF72D52AE16C5E007C16AE /* HomeButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90CF72D42AE16C5E007C16AE /* HomeButtons.swift */; };
 		90CF72D72AE16CA8007C16AE /* TopBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90CF72D62AE16CA8007C16AE /* TopBar.swift */; };
 		90D0AB912AE1303500CC7A05 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D0AB902AE1303500CC7A05 /* HomeView.swift */; };
+		FCB214352B03FE1700176D22 /* DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB214342B03FE1700176D22 /* DataSource.swift */; };
+		FCB214372B03FE5B00176D22 /* Artikel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB214362B03FE5B00176D22 /* Artikel.swift */; };
+		FCB214392B03FE7800176D22 /* ArtikelService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB214382B03FE7800176D22 /* ArtikelService.swift */; };
+		FCB2143C2B03FE9700176D22 /* ArtikelViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB2143B2B03FE9700176D22 /* ArtikelViewModel.swift */; };
+		FCB2143E2B03FEE800176D22 /* NieuwsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB2143D2B03FEE800176D22 /* NieuwsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +30,11 @@
 		90CF72D42AE16C5E007C16AE /* HomeButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeButtons.swift; sourceTree = "<group>"; };
 		90CF72D62AE16CA8007C16AE /* TopBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopBar.swift; sourceTree = "<group>"; };
 		90D0AB902AE1303500CC7A05 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		FCB214342B03FE1700176D22 /* DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSource.swift; sourceTree = "<group>"; };
+		FCB214362B03FE5B00176D22 /* Artikel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Artikel.swift; sourceTree = "<group>"; };
+		FCB214382B03FE7800176D22 /* ArtikelService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ArtikelService.swift; path = VisionOogcentrum/models/ArtikelService.swift; sourceTree = SOURCE_ROOT; };
+		FCB2143B2B03FE9700176D22 /* ArtikelViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtikelViewModel.swift; sourceTree = "<group>"; };
+		FCB2143D2B03FEE800176D22 /* NieuwsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NieuwsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +67,8 @@
 		900F9A3E2AD85B5A006C1976 /* VisionOogcentrum */ = {
 			isa = PBXGroup;
 			children = (
+				FCB2143A2B03FE8800176D22 /* viewModels */,
+				FCB214332B03FE0A00176D22 /* data */,
 				FCD1C5D42ADEFB5000CF93EC /* controllers */,
 				FCD1C5D32ADEFB4A00CF93EC /* views */,
 				FCD1C5D22ADEFB3C00CF93EC /* models */,
@@ -76,9 +88,26 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		FCB214332B03FE0A00176D22 /* data */ = {
+			isa = PBXGroup;
+			children = (
+				FCB214342B03FE1700176D22 /* DataSource.swift */,
+			);
+			path = data;
+			sourceTree = "<group>";
+		};
+		FCB2143A2B03FE8800176D22 /* viewModels */ = {
+			isa = PBXGroup;
+			children = (
+				FCB2143B2B03FE9700176D22 /* ArtikelViewModel.swift */,
+			);
+			path = viewModels;
+			sourceTree = "<group>";
+		};
 		FCD1C5D12ADEFB2F00CF93EC /* services */ = {
 			isa = PBXGroup;
 			children = (
+				FCB214382B03FE7800176D22 /* ArtikelService.swift */,
 			);
 			path = services;
 			sourceTree = "<group>";
@@ -88,6 +117,7 @@
 			children = (
 				90CF72D42AE16C5E007C16AE /* HomeButtons.swift */,
 				90CF72D62AE16CA8007C16AE /* TopBar.swift */,
+				FCB214362B03FE5B00176D22 /* Artikel.swift */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -97,6 +127,7 @@
 			children = (
 				900F9A412AD85B5A006C1976 /* ContentView.swift */,
 				90D0AB902AE1303500CC7A05 /* HomeView.swift */,
+				FCB2143D2B03FEE800176D22 /* NieuwsView.swift */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -178,11 +209,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FCB214352B03FE1700176D22 /* DataSource.swift in Sources */,
 				90CF72D52AE16C5E007C16AE /* HomeButtons.swift in Sources */,
+				FCB214372B03FE5B00176D22 /* Artikel.swift in Sources */,
 				90D0AB912AE1303500CC7A05 /* HomeView.swift in Sources */,
+				FCB214392B03FE7800176D22 /* ArtikelService.swift in Sources */,
+				FCB2143C2B03FE9700176D22 /* ArtikelViewModel.swift in Sources */,
 				90CF72D72AE16CA8007C16AE /* TopBar.swift in Sources */,
 				900F9A422AD85B5A006C1976 /* ContentView.swift in Sources */,
 				900F9A402AD85B5A006C1976 /* VisionOogcentrumApp.swift in Sources */,
+				FCB2143E2B03FEE800176D22 /* NieuwsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -316,7 +352,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"VisionOogcentrum/Preview Content\"";
-				DEVELOPMENT_TEAM = QH4N3LDSXQ;
+				DEVELOPMENT_TEAM = 3AKN4G6B7A;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -345,7 +381,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"VisionOogcentrum/Preview Content\"";
-				DEVELOPMENT_TEAM = QH4N3LDSXQ;
+				DEVELOPMENT_TEAM = 3AKN4G6B7A;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
