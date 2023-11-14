@@ -11,18 +11,9 @@
 		900F9A422AD85B5A006C1976 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900F9A412AD85B5A006C1976 /* ContentView.swift */; };
 		900F9A442AD85B5A006C1976 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 900F9A432AD85B5A006C1976 /* Assets.xcassets */; };
 		900F9A472AD85B5A006C1976 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 900F9A462AD85B5A006C1976 /* Preview Assets.xcassets */; };
-<<<<<<< Updated upstream
 		90CF72D52AE16C5E007C16AE /* HomeButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90CF72D42AE16C5E007C16AE /* HomeButtons.swift */; };
 		90CF72D72AE16CA8007C16AE /* TopBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90CF72D62AE16CA8007C16AE /* TopBar.swift */; };
 		90D0AB912AE1303500CC7A05 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D0AB902AE1303500CC7A05 /* HomeView.swift */; };
-=======
-		FC1CD8F62B03BD9C00A30C41 /* Artikel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1CD8F52B03BD9C00A30C41 /* Artikel.swift */; };
-		FC1CD8F82B03BF8400A30C41 /* ArtikelService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1CD8F72B03BF8400A30C41 /* ArtikelService.swift */; };
-		FC1CD8FB2B03C19800A30C41 /* DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1CD8FA2B03C19800A30C41 /* DataSource.swift */; };
-		FC1CD8FD2B03C57300A30C41 /* NieuwsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1CD8FC2B03C57300A30C41 /* NieuwsView.swift */; };
-		FC1CD9002B03E33D00A30C41 /* ArtikelViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1CD8FF2B03E33D00A30C41 /* ArtikelViewModel.swift */; };
-		FCD1C5DA2ADF1ECF00CF93EC /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD1C5D92ADF1ECF00CF93EC /* HomeView.swift */; };
->>>>>>> Stashed changes
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,18 +22,9 @@
 		900F9A412AD85B5A006C1976 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		900F9A432AD85B5A006C1976 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		900F9A462AD85B5A006C1976 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-<<<<<<< Updated upstream
 		90CF72D42AE16C5E007C16AE /* HomeButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeButtons.swift; sourceTree = "<group>"; };
 		90CF72D62AE16CA8007C16AE /* TopBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopBar.swift; sourceTree = "<group>"; };
 		90D0AB902AE1303500CC7A05 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
-=======
-		FC1CD8F52B03BD9C00A30C41 /* Artikel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Artikel.swift; sourceTree = "<group>"; };
-		FC1CD8F72B03BF8400A30C41 /* ArtikelService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtikelService.swift; sourceTree = "<group>"; };
-		FC1CD8FA2B03C19800A30C41 /* DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSource.swift; sourceTree = "<group>"; };
-		FC1CD8FC2B03C57300A30C41 /* NieuwsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NieuwsView.swift; sourceTree = "<group>"; };
-		FC1CD8FF2B03E33D00A30C41 /* ArtikelViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtikelViewModel.swift; sourceTree = "<group>"; };
-		FCD1C5D92ADF1ECF00CF93EC /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
->>>>>>> Stashed changes
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,8 +57,6 @@
 		900F9A3E2AD85B5A006C1976 /* VisionOogcentrum */ = {
 			isa = PBXGroup;
 			children = (
-				FC1CD8FE2B03E32E00A30C41 /* viewModels */,
-				FC1CD8F92B03C18A00A30C41 /* data */,
 				FCD1C5D42ADEFB5000CF93EC /* controllers */,
 				FCD1C5D32ADEFB4A00CF93EC /* views */,
 				FCD1C5D22ADEFB3C00CF93EC /* models */,
@@ -96,26 +76,9 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		FC1CD8F92B03C18A00A30C41 /* data */ = {
-			isa = PBXGroup;
-			children = (
-				FC1CD8FA2B03C19800A30C41 /* DataSource.swift */,
-			);
-			path = data;
-			sourceTree = "<group>";
-		};
-		FC1CD8FE2B03E32E00A30C41 /* viewModels */ = {
-			isa = PBXGroup;
-			children = (
-				FC1CD8FF2B03E33D00A30C41 /* ArtikelViewModel.swift */,
-			);
-			path = viewModels;
-			sourceTree = "<group>";
-		};
 		FCD1C5D12ADEFB2F00CF93EC /* services */ = {
 			isa = PBXGroup;
 			children = (
-				FC1CD8F72B03BF8400A30C41 /* ArtikelService.swift */,
 			);
 			path = services;
 			sourceTree = "<group>";
@@ -123,12 +86,8 @@
 		FCD1C5D22ADEFB3C00CF93EC /* models */ = {
 			isa = PBXGroup;
 			children = (
-<<<<<<< Updated upstream
 				90CF72D42AE16C5E007C16AE /* HomeButtons.swift */,
 				90CF72D62AE16CA8007C16AE /* TopBar.swift */,
-=======
-				FC1CD8F52B03BD9C00A30C41 /* Artikel.swift */,
->>>>>>> Stashed changes
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -136,13 +95,8 @@
 		FCD1C5D32ADEFB4A00CF93EC /* views */ = {
 			isa = PBXGroup;
 			children = (
-<<<<<<< Updated upstream
 				900F9A412AD85B5A006C1976 /* ContentView.swift */,
 				90D0AB902AE1303500CC7A05 /* HomeView.swift */,
-=======
-				FCD1C5D92ADF1ECF00CF93EC /* HomeView.swift */,
-				FC1CD8FC2B03C57300A30C41 /* NieuwsView.swift */,
->>>>>>> Stashed changes
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -224,18 +178,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-<<<<<<< Updated upstream
 				90CF72D52AE16C5E007C16AE /* HomeButtons.swift in Sources */,
 				90D0AB912AE1303500CC7A05 /* HomeView.swift in Sources */,
 				90CF72D72AE16CA8007C16AE /* TopBar.swift in Sources */,
-=======
-				FC1CD8FB2B03C19800A30C41 /* DataSource.swift in Sources */,
-				FC1CD9002B03E33D00A30C41 /* ArtikelViewModel.swift in Sources */,
-				FC1CD8F82B03BF8400A30C41 /* ArtikelService.swift in Sources */,
-				FC1CD8FD2B03C57300A30C41 /* NieuwsView.swift in Sources */,
-				FC1CD8F62B03BD9C00A30C41 /* Artikel.swift in Sources */,
-				FCD1C5DA2ADF1ECF00CF93EC /* HomeView.swift in Sources */,
->>>>>>> Stashed changes
 				900F9A422AD85B5A006C1976 /* ContentView.swift in Sources */,
 				900F9A402AD85B5A006C1976 /* VisionOogcentrumApp.swift in Sources */,
 			);
@@ -371,11 +316,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"VisionOogcentrum/Preview Content\"";
-<<<<<<< Updated upstream
 				DEVELOPMENT_TEAM = QH4N3LDSXQ;
-=======
-				DEVELOPMENT_TEAM = 3AKN4G6B7A;
->>>>>>> Stashed changes
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -404,11 +345,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"VisionOogcentrum/Preview Content\"";
-<<<<<<< Updated upstream
 				DEVELOPMENT_TEAM = QH4N3LDSXQ;
-=======
-				DEVELOPMENT_TEAM = 3AKN4G6B7A;
->>>>>>> Stashed changes
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;

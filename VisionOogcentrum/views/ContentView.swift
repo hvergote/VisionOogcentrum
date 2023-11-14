@@ -9,7 +9,6 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-<<<<<<< Updated upstream:VisionOogcentrum/views/ContentView.swift
         VStack {
             TabView {
                 HomeView()
@@ -28,27 +27,10 @@ struct ContentView: View {
             .foregroundStyle(Color("TextColor"))
             .font(.largeTitle)
             .accentColor(.accentColor)
-=======
-        TabView {
-            HomeView()
-                .tabItem {
-                    Image(systemName: "house")
-                }
-            Text("afspraken")
-                .tabItem {
-                    Image(systemName: "calendar")
-                }
-            Text("stel je vragen hier")
-                .tabItem {
-                    Image (systemName: "text.bubble")
-                }
->>>>>>> Stashed changes:VisionOogcentrum/ContentView.swift
         }
     }
 }
 
 #Preview {
     ContentView()
-    
 }
-
