@@ -1,12 +1,21 @@
 import Foundation
 
-func getArtikels() async throws -> [Artikel]{
-    //link werkt niet op localhost
-    let url = URL(string: "https://localhost:7181/api/artikel")!
+class ArtikelService {
+    static let shared = ArtikelService()
+    
+    private init() {}
+    
+    func getArtikels() async throws -> [Artikel] {
+        let url = URL(string: "https:/fd7c-78-23-244-204.ngrok-free.app/api/artikel")!
 
-    let (data, _) = try await URLSession.shared.data(from: url)
-
-    let decoded = try JSONDecoder().decode(ArtikelsResponse.self, from: data)
-
-    return decoded.result
+        let (data, _) = try await URLSession.shared.data(from: url)
+        do {
+            let decoded = try JSONDecoder().decode([Artikel].self, from: data)
+            return decoded
+        } catch {
+            print("Error decoding artikels: \(error)")
+            throw error
+        }
+    }
 }
+

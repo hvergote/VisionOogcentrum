@@ -7,4 +7,5 @@ struct Artikel: Identifiable, Decodable{
     let titel: String
     let text: String
     let image: String
+    let created: String
 }

@@ -2,13 +2,13 @@ import Foundation
 import SwiftUI
 
 struct NieuwsView: View {
-    let dataSource = DataSource()
     @State private var selectedArtikel: Artikel? = nil
     @StateObject private var viewModel = ArtikelViewModel()
+
     var body: some View {
         ScrollView {
             VStack(spacing: 16) {
-                ForEach(dataSource.artikels) { artikel in
+                ForEach(viewModel.artikels) { artikel in
                     ArtikelView(artikel: artikel)
                         .onTapGesture {
                             selectedArtikel = artikel
@@ -17,13 +17,18 @@ struct NieuwsView: View {
             }
             .padding()
             .sheet(item: $selectedArtikel) { selectedArtikel in
-                DetailView(artikel : selectedArtikel)}
+                DetailView(artikel: selectedArtikel)
+            }
         }
-        .onAppear{
-            print(viewModel.artikels)
+        .onAppear {
+            Task {
+                await viewModel.fetchArtikels()
+                print(viewModel.artikels)
+            }
         }
     }
 }
+
 
 struct ArtikelView: View {
     var artikel: Artikel

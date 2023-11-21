@@ -7,11 +7,16 @@
 import Foundation
 class ArtikelViewModel: ObservableObject {
     @Published var artikels: [Artikel] = []
+    private let artikelRepository: ArtikelRepository
+
+    init() {
+        self.artikelRepository = NetworkArtikelRepository() // You can change this based on your needs
+    }
 
     func fetchArtikels() async {
         do {
-            self.artikels = try await getArtikels()
-        } catch{
+            artikels = try await artikelRepository.getAllArtikels()
+        } catch {
             print("Error fetching artikels: \(error)")
         }
     }

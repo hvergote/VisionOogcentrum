@@ -19,6 +19,8 @@
 		FCB214392B03FE7800176D22 /* ArtikelService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB214382B03FE7800176D22 /* ArtikelService.swift */; };
 		FCB2143C2B03FE9700176D22 /* ArtikelViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB2143B2B03FE9700176D22 /* ArtikelViewModel.swift */; };
 		FCB2143E2B03FEE800176D22 /* NieuwsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB2143D2B03FEE800176D22 /* NieuwsView.swift */; };
+		FCB214402B0CE29F00176D22 /* ArtikelRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB2143F2B0CE29F00176D22 /* ArtikelRepository.swift */; };
+		FCB214422B0CE82100176D22 /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB214412B0CE82100176D22 /* ApiService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +37,8 @@
 		FCB214382B03FE7800176D22 /* ArtikelService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ArtikelService.swift; path = VisionOogcentrum/models/ArtikelService.swift; sourceTree = SOURCE_ROOT; };
 		FCB2143B2B03FE9700176D22 /* ArtikelViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtikelViewModel.swift; sourceTree = "<group>"; };
 		FCB2143D2B03FEE800176D22 /* NieuwsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NieuwsView.swift; sourceTree = "<group>"; };
+		FCB2143F2B0CE29F00176D22 /* ArtikelRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtikelRepository.swift; sourceTree = "<group>"; };
+		FCB214412B0CE82100176D22 /* ApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ApiService.swift; path = VisionOogcentrum/data/ApiService.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +96,7 @@
 			isa = PBXGroup;
 			children = (
 				FCB214342B03FE1700176D22 /* DataSource.swift */,
+				FCB2143F2B0CE29F00176D22 /* ArtikelRepository.swift */,
 			);
 			path = data;
 			sourceTree = "<group>";
@@ -108,6 +113,7 @@
 			isa = PBXGroup;
 			children = (
 				FCB214382B03FE7800176D22 /* ArtikelService.swift */,
+				FCB214412B0CE82100176D22 /* ApiService.swift */,
 			);
 			path = services;
 			sourceTree = "<group>";
@@ -211,6 +217,8 @@
 			files = (
 				FCB214352B03FE1700176D22 /* DataSource.swift in Sources */,
 				90CF72D52AE16C5E007C16AE /* HomeButtons.swift in Sources */,
+				FCB214422B0CE82100176D22 /* ApiService.swift in Sources */,
+				FCB214402B0CE29F00176D22 /* ArtikelRepository.swift in Sources */,
 				FCB214372B03FE5B00176D22 /* Artikel.swift in Sources */,
 				90D0AB912AE1303500CC7A05 /* HomeView.swift in Sources */,
 				FCB214392B03FE7800176D22 /* ArtikelService.swift in Sources */,
