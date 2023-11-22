@@ -20,6 +20,11 @@ struct NieuwsView: View {
                 DetailView(artikel: selectedArtikel)
             }
         }
+        .onAppear {
+            Task {
+                await viewModel.fetchArtikels()
+            }
+        }
     }
 }
 

@@ -5,17 +5,31 @@
 //  Created by Arnaud De Weghe on 14/11/2023.
 //
 import Foundation
+import Combine
+
 class ArtikelViewModel: ObservableObject {
     @Published var artikels: [Artikel] = []
     private let artikelRepository: ArtikelRepository
+    private var cancellables: Set<AnyCancellable> = []
 
     init() {
-        self.artikelRepository = NetworkArtikelRepository() // You can change this based on your needs
+        self.artikelRepository = NetworkArtikelRepository()
+        setupObserving()
     }
 
+    private func setupObserving() {
+        $artikels
+            .receive(on: DispatchQueue.main)
+            .sink { _ in }
+            .store(in: &cancellables)
+    }
+    
     func fetchArtikels() async {
         do {
-            artikels = try await artikelRepository.getAllArtikels()
+            let fetchedArtikels = try await artikelRepository.getAllArtikels()
+            DispatchQueue.main.async {
+                self.artikels = fetchedArtikels
+            }
         } catch {
             print("Error fetching artikels: \(error)")
         }
