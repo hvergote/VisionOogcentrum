@@ -10,7 +10,6 @@ import SwiftUI
 struct AandoeningenView: View {
     @State private var selectedAandoening: OogZiekte? = nil
     @StateObject private var viewModel = OogZiekteViewModel()
-
     var body: some View {
         ScrollView {
             LazyVStack {

@@ -24,6 +24,9 @@
 		FCB214482B0E476C00176D22 /* OogZiekte.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB214472B0E476C00176D22 /* OogZiekte.swift */; };
 		FCB2144A2B0E4A5500176D22 /* OogZiekteRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB214492B0E4A5500176D22 /* OogZiekteRepository.swift */; };
 		FCB2144C2B0E4B0B00176D22 /* OogZiekteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB2144B2B0E4B0B00176D22 /* OogZiekteViewModel.swift */; };
+		FCB2144E2B0E674700176D22 /* Arts.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB2144D2B0E674700176D22 /* Arts.swift */; };
+		FCB214502B0E686100176D22 /* ArtsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB2144F2B0E686100176D22 /* ArtsRepository.swift */; };
+		FCB214522B0E68D300176D22 /* ArtsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB214512B0E68D300176D22 /* ArtsViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +48,9 @@
 		FCB214472B0E476C00176D22 /* OogZiekte.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OogZiekte.swift; sourceTree = "<group>"; };
 		FCB214492B0E4A5500176D22 /* OogZiekteRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OogZiekteRepository.swift; sourceTree = "<group>"; };
 		FCB2144B2B0E4B0B00176D22 /* OogZiekteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OogZiekteViewModel.swift; sourceTree = "<group>"; };
+		FCB2144D2B0E674700176D22 /* Arts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Arts.swift; sourceTree = "<group>"; };
+		FCB2144F2B0E686100176D22 /* ArtsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtsRepository.swift; sourceTree = "<group>"; };
+		FCB214512B0E68D300176D22 /* ArtsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtsViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +110,7 @@
 				FCB214342B03FE1700176D22 /* DataSource.swift */,
 				FCB2143F2B0CE29F00176D22 /* ArtikelRepository.swift */,
 				FCB214492B0E4A5500176D22 /* OogZiekteRepository.swift */,
+				FCB2144F2B0E686100176D22 /* ArtsRepository.swift */,
 			);
 			path = data;
 			sourceTree = "<group>";
@@ -113,6 +120,7 @@
 			children = (
 				FCB2143B2B03FE9700176D22 /* ArtikelViewModel.swift */,
 				FCB2144B2B0E4B0B00176D22 /* OogZiekteViewModel.swift */,
+				FCB214512B0E68D300176D22 /* ArtsViewModel.swift */,
 			);
 			path = viewModels;
 			sourceTree = "<group>";
@@ -128,10 +136,9 @@
 		FCD1C5D22ADEFB3C00CF93EC /* models */ = {
 			isa = PBXGroup;
 			children = (
-				90CF72D42AE16C5E007C16AE /* HomeButtons.swift */,
-				90CF72D62AE16CA8007C16AE /* TopBar.swift */,
 				FCB214362B03FE5B00176D22 /* Artikel.swift */,
 				FCB214472B0E476C00176D22 /* OogZiekte.swift */,
+				FCB2144D2B0E674700176D22 /* Arts.swift */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -139,6 +146,8 @@
 		FCD1C5D32ADEFB4A00CF93EC /* views */ = {
 			isa = PBXGroup;
 			children = (
+				90CF72D42AE16C5E007C16AE /* HomeButtons.swift */,
+				90CF72D62AE16CA8007C16AE /* TopBar.swift */,
 				900F9A412AD85B5A006C1976 /* ContentView.swift */,
 				90D0AB902AE1303500CC7A05 /* HomeView.swift */,
 				FCB2143D2B03FEE800176D22 /* NieuwsView.swift */,
@@ -239,6 +248,9 @@
 				900F9A422AD85B5A006C1976 /* ContentView.swift in Sources */,
 				900F9A402AD85B5A006C1976 /* VisionOogcentrumApp.swift in Sources */,
 				FCB2143E2B03FEE800176D22 /* NieuwsView.swift in Sources */,
+				FCB2144E2B0E674700176D22 /* Arts.swift in Sources */,
+				FCB214522B0E68D300176D22 /* ArtsViewModel.swift in Sources */,
+				FCB214502B0E686100176D22 /* ArtsRepository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

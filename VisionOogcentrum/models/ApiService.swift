@@ -32,6 +32,18 @@ class ApiService {
             throw error
         }
     }
+    func getArtsen() async throws -> [Arts] {
+        let url = URL(string: "\(baseURL)/arts")!
+
+        let (data, _) = try await URLSession.shared.data(from: url)
+        do {
+            let decoded = try JSONDecoder().decode([Arts].self, from: data)
+            return decoded
+        } catch {
+            print("Error decoding oogziektes: \(error)")
+            throw error
+        }
+    }
 }
 
 
