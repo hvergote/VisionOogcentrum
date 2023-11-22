@@ -13,6 +13,6 @@ protocol ArtikelRepository {
 
 class NetworkArtikelRepository: ArtikelRepository {
     func getAllArtikels() async throws -> [Artikel] {
-        return try await ArtikelService.shared.getArtikels()
+        return try await ApiService.shared.getArtikels()
     }
 }

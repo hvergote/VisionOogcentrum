@@ -70,7 +70,20 @@ struct HomeButtons: View {
                         }
                         .buttonStyle(PlainButtonStyle()) // Apply a button style to make it look like a button
                     }
-                    
+                    NavigationLink(destination: AandoeningenView()
+                        .navigationBarTitle("Aandoeningen", displayMode: .inline)) {
+                        ZStack {
+                            let base = RoundedRectangle(cornerRadius: 12)
+                            Group {
+                                base.fill(Color("BackgroundColor"))
+                                Text("Aandoeningen")
+                                    .foregroundStyle(Color("TextColor"))
+                                    .padding(10)
+                                    .font(.body)
+                            }
+                        }
+                        .buttonStyle(PlainButtonStyle()) // Apply a button style to make it look like a button
+                    }
                 }
             }
         }

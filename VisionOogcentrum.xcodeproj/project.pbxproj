@@ -16,11 +16,14 @@
 		90D0AB912AE1303500CC7A05 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D0AB902AE1303500CC7A05 /* HomeView.swift */; };
 		FCB214352B03FE1700176D22 /* DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB214342B03FE1700176D22 /* DataSource.swift */; };
 		FCB214372B03FE5B00176D22 /* Artikel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB214362B03FE5B00176D22 /* Artikel.swift */; };
-		FCB214392B03FE7800176D22 /* ArtikelService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB214382B03FE7800176D22 /* ArtikelService.swift */; };
+		FCB214392B03FE7800176D22 /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB214382B03FE7800176D22 /* ApiService.swift */; };
 		FCB2143C2B03FE9700176D22 /* ArtikelViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB2143B2B03FE9700176D22 /* ArtikelViewModel.swift */; };
 		FCB2143E2B03FEE800176D22 /* NieuwsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB2143D2B03FEE800176D22 /* NieuwsView.swift */; };
 		FCB214402B0CE29F00176D22 /* ArtikelRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB2143F2B0CE29F00176D22 /* ArtikelRepository.swift */; };
-		FCB214422B0CE82100176D22 /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB214412B0CE82100176D22 /* ApiService.swift */; };
+		FCB214442B0E46E400176D22 /* AandoeningenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB214432B0E46E300176D22 /* AandoeningenView.swift */; };
+		FCB214482B0E476C00176D22 /* OogZiekte.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB214472B0E476C00176D22 /* OogZiekte.swift */; };
+		FCB2144A2B0E4A5500176D22 /* OogZiekteRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB214492B0E4A5500176D22 /* OogZiekteRepository.swift */; };
+		FCB2144C2B0E4B0B00176D22 /* OogZiekteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB2144B2B0E4B0B00176D22 /* OogZiekteViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,11 +37,14 @@
 		90D0AB902AE1303500CC7A05 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		FCB214342B03FE1700176D22 /* DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSource.swift; sourceTree = "<group>"; };
 		FCB214362B03FE5B00176D22 /* Artikel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Artikel.swift; sourceTree = "<group>"; };
-		FCB214382B03FE7800176D22 /* ArtikelService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ArtikelService.swift; path = VisionOogcentrum/models/ArtikelService.swift; sourceTree = SOURCE_ROOT; };
+		FCB214382B03FE7800176D22 /* ApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ApiService.swift; path = VisionOogcentrum/models/ApiService.swift; sourceTree = SOURCE_ROOT; };
 		FCB2143B2B03FE9700176D22 /* ArtikelViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtikelViewModel.swift; sourceTree = "<group>"; };
 		FCB2143D2B03FEE800176D22 /* NieuwsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NieuwsView.swift; sourceTree = "<group>"; };
 		FCB2143F2B0CE29F00176D22 /* ArtikelRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtikelRepository.swift; sourceTree = "<group>"; };
-		FCB214412B0CE82100176D22 /* ApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ApiService.swift; path = VisionOogcentrum/data/ApiService.swift; sourceTree = SOURCE_ROOT; };
+		FCB214432B0E46E300176D22 /* AandoeningenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AandoeningenView.swift; sourceTree = "<group>"; };
+		FCB214472B0E476C00176D22 /* OogZiekte.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OogZiekte.swift; sourceTree = "<group>"; };
+		FCB214492B0E4A5500176D22 /* OogZiekteRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OogZiekteRepository.swift; sourceTree = "<group>"; };
+		FCB2144B2B0E4B0B00176D22 /* OogZiekteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OogZiekteViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +103,7 @@
 			children = (
 				FCB214342B03FE1700176D22 /* DataSource.swift */,
 				FCB2143F2B0CE29F00176D22 /* ArtikelRepository.swift */,
+				FCB214492B0E4A5500176D22 /* OogZiekteRepository.swift */,
 			);
 			path = data;
 			sourceTree = "<group>";
@@ -105,6 +112,7 @@
 			isa = PBXGroup;
 			children = (
 				FCB2143B2B03FE9700176D22 /* ArtikelViewModel.swift */,
+				FCB2144B2B0E4B0B00176D22 /* OogZiekteViewModel.swift */,
 			);
 			path = viewModels;
 			sourceTree = "<group>";
@@ -112,8 +120,7 @@
 		FCD1C5D12ADEFB2F00CF93EC /* services */ = {
 			isa = PBXGroup;
 			children = (
-				FCB214382B03FE7800176D22 /* ArtikelService.swift */,
-				FCB214412B0CE82100176D22 /* ApiService.swift */,
+				FCB214382B03FE7800176D22 /* ApiService.swift */,
 			);
 			path = services;
 			sourceTree = "<group>";
@@ -124,6 +131,7 @@
 				90CF72D42AE16C5E007C16AE /* HomeButtons.swift */,
 				90CF72D62AE16CA8007C16AE /* TopBar.swift */,
 				FCB214362B03FE5B00176D22 /* Artikel.swift */,
+				FCB214472B0E476C00176D22 /* OogZiekte.swift */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -134,6 +142,7 @@
 				900F9A412AD85B5A006C1976 /* ContentView.swift */,
 				90D0AB902AE1303500CC7A05 /* HomeView.swift */,
 				FCB2143D2B03FEE800176D22 /* NieuwsView.swift */,
+				FCB214432B0E46E300176D22 /* AandoeningenView.swift */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -215,14 +224,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FCB2144C2B0E4B0B00176D22 /* OogZiekteViewModel.swift in Sources */,
+				FCB214442B0E46E400176D22 /* AandoeningenView.swift in Sources */,
 				FCB214352B03FE1700176D22 /* DataSource.swift in Sources */,
 				90CF72D52AE16C5E007C16AE /* HomeButtons.swift in Sources */,
-				FCB214422B0CE82100176D22 /* ApiService.swift in Sources */,
 				FCB214402B0CE29F00176D22 /* ArtikelRepository.swift in Sources */,
 				FCB214372B03FE5B00176D22 /* Artikel.swift in Sources */,
 				90D0AB912AE1303500CC7A05 /* HomeView.swift in Sources */,
-				FCB214392B03FE7800176D22 /* ArtikelService.swift in Sources */,
+				FCB214392B03FE7800176D22 /* ApiService.swift in Sources */,
 				FCB2143C2B03FE9700176D22 /* ArtikelViewModel.swift in Sources */,
+				FCB2144A2B0E4A5500176D22 /* OogZiekteRepository.swift in Sources */,
+				FCB214482B0E476C00176D22 /* OogZiekte.swift in Sources */,
 				90CF72D72AE16CA8007C16AE /* TopBar.swift in Sources */,
 				900F9A422AD85B5A006C1976 /* ContentView.swift in Sources */,
 				900F9A402AD85B5A006C1976 /* VisionOogcentrumApp.swift in Sources */,
