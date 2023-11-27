@@ -20,10 +20,38 @@ struct TeamView: View {
 }
 struct TeamPersoonView: View {
     var persoon: Team
+
     var body: some View {
-        Text(persoon.voornaam + " " + persoon.naam)
+        VStack(spacing: 10) {
+            Text(persoon.voornaam + " " + persoon.naam)
+                .font(.title)
+                .foregroundColor(.primary)
+            
+            AsyncImage(url: persoon.image) { phase in
+                switch phase {
+                case .success(let image):
+                    image
+                        .resizable()
+                        .aspectRatio(contentMode: .fill)
+                        .frame(width: 150, height: 150)
+                        .cornerRadius(8)
+                case .failure:
+                    Color.gray
+                case .empty:
+                    ProgressView()
+                }
+            }
+            
+            Spacer()
+        }
+        .padding()
+        .background(Color.white)
+        .cornerRadius(10)
+        .shadow(radius: 5)
+        .frame(width: 200, height: 250)
     }
 }
+
 #Preview {
     TeamView()
 }

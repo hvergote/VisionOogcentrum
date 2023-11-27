@@ -23,10 +23,9 @@ class DataSource {
     ]
     
     public let team: [Team] = [
-        Team(voornaam: "Arts", naam: "1"),
-        Team(voornaam: "Arts", naam: "2"),
-        Team(voornaam: "Arts", naam: "3"),
-        Team(voornaam: "Arts", naam: "4")
+        Team(voornaam: "Ozlem", naam: "Kose", image: URL(string: "https://oogartsg02.blob.core.windows.net/images/kose.jpg")),
+        Team(voornaam: "Eline", naam: "De Pauw", image: URL(string: "https://oogartsg02.blob.core.windows.net/images/Foto Eline De Pauw.jpeg")),
+        Team(voornaam: "Diete", naam: "Paternoster", image: URL(string: "https://oogartsg02.blob.core.windows.net/images/Foto Diete Paternoster.png"))
     ]
  
 }

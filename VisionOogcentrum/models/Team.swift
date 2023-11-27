@@ -10,9 +10,9 @@ struct Team: Identifiable, Decodable{
     let id: String
     let voornaam: String
     let naam: String
-    let image: String
+    let image: URL?
     
-    init(voornaam: String, naam: String, image: String = "") {
+    init(voornaam: String, naam: String, image: URL?) {
         self.id = voornaam + naam
         self.voornaam = voornaam
         self.naam = naam
