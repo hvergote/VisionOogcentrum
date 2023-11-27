@@ -21,4 +21,12 @@ class DataSource {
     public let OogZiektes: [OogZiekte] = [
         OogZiekte(id: "6403f885-9b4c-4037-a079-76b03e199e3e", titel: "Myopie", beschrijving: "Myopie, ook wel bijziendheid genoemd, is een oogafwijking waarbij je dichtbij goed kunt zien, maar objecten op afstand wazig lijken. Dit gebeurt wanneer de oogbol te lang is of het hoornvlies (het heldere voorste deel van het oog) te veel kromming heeft. Hierdoor wordt het invallende licht niet correct gefocust op het netvlies, het lichtgevoelige weefsel aan de achterkant van het oog.", specialisatieId: "d498f2ea-8201-42ce-b7c1-b1a9db077f3a", specialisatie: "Lasik", behandeling: "Lasik")
     ]
+    
+    public let team: [Team] = [
+        Team(voornaam: "Arts", naam: "1"),
+        Team(voornaam: "Arts", naam: "2"),
+        Team(voornaam: "Arts", naam: "3"),
+        Team(voornaam: "Arts", naam: "4")
+    ]
+ 
 }

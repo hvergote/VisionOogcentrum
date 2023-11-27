@@ -45,17 +45,30 @@ struct HomeButtons: View {
                             })
                         }
                     }
-                    ZStack {
-                        let base = RoundedRectangle(cornerRadius: 12)
-                        Group {
-                            base.fill(Color("BackgroundColor"))
-                            Button(action: {}, label: {
+//                    ZStack {
+//                        let base = RoundedRectangle(cornerRadius: 12)
+//                        Group {
+//                            base.fill(Color("BackgroundColor"))
+//                            Button(action: {}, label: {
+//                                Text("Team")
+//                                    .foregroundStyle(Color("TextColor"))
+//                                    .padding(10)
+//                                    .font(.body)
+//                            })
+//                        }
+//                    }
+                    NavigationLink(destination: TeamView()) {
+                        ZStack {
+                            let base = RoundedRectangle(cornerRadius: 12)
+                            Group {
+                                base.fill(Color("BackgroundColor"))
                                 Text("Team")
                                     .foregroundStyle(Color("TextColor"))
                                     .padding(10)
                                     .font(.body)
-                            })
+                            }
                         }
+                        .buttonStyle(PlainButtonStyle())
                     }
                     NavigationLink(destination: NieuwsView()) {
                         ZStack {
