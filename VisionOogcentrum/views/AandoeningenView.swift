@@ -80,3 +80,7 @@ struct AandoeningDetailView: View {
         .padding()
     }
 }
+
+#Preview {
+    AandoeningenView()
+}

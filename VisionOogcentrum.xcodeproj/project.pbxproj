@@ -11,8 +11,12 @@
 		900F9A422AD85B5A006C1976 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900F9A412AD85B5A006C1976 /* ContentView.swift */; };
 		900F9A442AD85B5A006C1976 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 900F9A432AD85B5A006C1976 /* Assets.xcassets */; };
 		900F9A472AD85B5A006C1976 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 900F9A462AD85B5A006C1976 /* Preview Assets.xcassets */; };
+		901B761B2B1F6AFE0042A2E0 /* FAQ.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901B761A2B1F6AFE0042A2E0 /* FAQ.swift */; };
+		901B761E2B1F73060042A2E0 /* FAQView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901B761D2B1F73060042A2E0 /* FAQView.swift */; };
 		9021E2AB2B14E86400FB477B /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9021E2AA2B14E86400FB477B /* Team.swift */; };
 		9021E2AD2B14E88800FB477B /* TeamView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9021E2AC2B14E88800FB477B /* TeamView.swift */; };
+		907E1DC32B1F8198001E1935 /* FAQViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 907E1DC22B1F8198001E1935 /* FAQViewModel.swift */; };
+		907E1DC52B1F81E8001E1935 /* faqRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 907E1DC42B1F81E8001E1935 /* faqRepository.swift */; };
 		90CF72D52AE16C5E007C16AE /* HomeButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90CF72D42AE16C5E007C16AE /* HomeButtons.swift */; };
 		90CF72D72AE16CA8007C16AE /* TopBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90CF72D62AE16CA8007C16AE /* TopBar.swift */; };
 		90D0AB912AE1303500CC7A05 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D0AB902AE1303500CC7A05 /* HomeView.swift */; };
@@ -37,8 +41,13 @@
 		900F9A412AD85B5A006C1976 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		900F9A432AD85B5A006C1976 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		900F9A462AD85B5A006C1976 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		901B761A2B1F6AFE0042A2E0 /* FAQ.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAQ.swift; sourceTree = "<group>"; };
+		901B761C2B1F70710042A2E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		901B761D2B1F73060042A2E0 /* FAQView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAQView.swift; sourceTree = "<group>"; };
 		9021E2AA2B14E86400FB477B /* Team.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
 		9021E2AC2B14E88800FB477B /* TeamView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamView.swift; sourceTree = "<group>"; };
+		907E1DC22B1F8198001E1935 /* FAQViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAQViewModel.swift; sourceTree = "<group>"; };
+		907E1DC42B1F81E8001E1935 /* faqRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = faqRepository.swift; sourceTree = "<group>"; };
 		90CF72D42AE16C5E007C16AE /* HomeButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeButtons.swift; sourceTree = "<group>"; };
 		90CF72D62AE16CA8007C16AE /* TopBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopBar.swift; sourceTree = "<group>"; };
 		90D0AB902AE1303500CC7A05 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -87,6 +96,7 @@
 		900F9A3E2AD85B5A006C1976 /* VisionOogcentrum */ = {
 			isa = PBXGroup;
 			children = (
+				901B761C2B1F70710042A2E0 /* Info.plist */,
 				FCB2143A2B03FE8800176D22 /* viewModels */,
 				FCB214332B03FE0A00176D22 /* data */,
 				FCD1C5D42ADEFB5000CF93EC /* controllers */,
@@ -115,6 +125,7 @@
 				FCB2143F2B0CE29F00176D22 /* ArtikelRepository.swift */,
 				FCB214492B0E4A5500176D22 /* OogZiekteRepository.swift */,
 				FCB2144F2B0E686100176D22 /* ArtsRepository.swift */,
+				907E1DC42B1F81E8001E1935 /* faqRepository.swift */,
 			);
 			path = data;
 			sourceTree = "<group>";
@@ -125,6 +136,7 @@
 				FCB2143B2B03FE9700176D22 /* ArtikelViewModel.swift */,
 				FCB2144B2B0E4B0B00176D22 /* OogZiekteViewModel.swift */,
 				FCB214512B0E68D300176D22 /* ArtsViewModel.swift */,
+				907E1DC22B1F8198001E1935 /* FAQViewModel.swift */,
 			);
 			path = viewModels;
 			sourceTree = "<group>";
@@ -144,6 +156,7 @@
 				FCB214472B0E476C00176D22 /* OogZiekte.swift */,
 				FCB2144D2B0E674700176D22 /* Arts.swift */,
 				9021E2AA2B14E86400FB477B /* Team.swift */,
+				901B761A2B1F6AFE0042A2E0 /* FAQ.swift */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -158,6 +171,7 @@
 				FCB2143D2B03FEE800176D22 /* NieuwsView.swift */,
 				FCB214432B0E46E300176D22 /* AandoeningenView.swift */,
 				9021E2AC2B14E88800FB477B /* TeamView.swift */,
+				901B761D2B1F73060042A2E0 /* FAQView.swift */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -243,6 +257,7 @@
 				FCB214442B0E46E400176D22 /* AandoeningenView.swift in Sources */,
 				9021E2AB2B14E86400FB477B /* Team.swift in Sources */,
 				FCB214352B03FE1700176D22 /* DataSource.swift in Sources */,
+				907E1DC32B1F8198001E1935 /* FAQViewModel.swift in Sources */,
 				90CF72D52AE16C5E007C16AE /* HomeButtons.swift in Sources */,
 				FCB214402B0CE29F00176D22 /* ArtikelRepository.swift in Sources */,
 				FCB214372B03FE5B00176D22 /* Artikel.swift in Sources */,
@@ -250,6 +265,7 @@
 				90D0AB912AE1303500CC7A05 /* HomeView.swift in Sources */,
 				FCB214392B03FE7800176D22 /* ApiService.swift in Sources */,
 				FCB2143C2B03FE9700176D22 /* ArtikelViewModel.swift in Sources */,
+				901B761B2B1F6AFE0042A2E0 /* FAQ.swift in Sources */,
 				FCB2144A2B0E4A5500176D22 /* OogZiekteRepository.swift in Sources */,
 				FCB214482B0E476C00176D22 /* OogZiekte.swift in Sources */,
 				90CF72D72AE16CA8007C16AE /* TopBar.swift in Sources */,
@@ -259,6 +275,8 @@
 				FCB2144E2B0E674700176D22 /* Arts.swift in Sources */,
 				FCB214522B0E68D300176D22 /* ArtsViewModel.swift in Sources */,
 				FCB214502B0E686100176D22 /* ArtsRepository.swift in Sources */,
+				907E1DC52B1F81E8001E1935 /* faqRepository.swift in Sources */,
+				901B761E2B1F73060042A2E0 /* FAQView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -395,6 +413,7 @@
 				DEVELOPMENT_TEAM = QH4N3LDSXQ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = VisionOogcentrum/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -424,6 +443,7 @@
 				DEVELOPMENT_TEAM = QH4N3LDSXQ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = VisionOogcentrum/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

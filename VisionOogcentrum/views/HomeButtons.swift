@@ -69,7 +69,7 @@ struct HomeButtons: View {
                                     .font(.body)
                             }
                         }
-                        .buttonStyle(PlainButtonStyle()) // Apply a button style to make it look like a button
+                        .buttonStyle(PlainButtonStyle())
                     }
                     NavigationLink(destination: AandoeningenView()
                         .navigationBarTitle("Aandoeningen", displayMode: .inline)) {
@@ -83,7 +83,19 @@ struct HomeButtons: View {
                                     .font(.body)
                             }
                         }
-                        .buttonStyle(PlainButtonStyle()) // Apply a button style to make it look like a button
+                        .buttonStyle(PlainButtonStyle())
+                    }
+                    NavigationLink(destination: FAQView().navigationBarTitle("FAQ", displayMode: .inline)) {
+                        ZStack {
+                            let base = RoundedRectangle(cornerRadius: 12)
+                            Group {
+                                base.fill(Color("BackgroundColor"))
+                                Text("FAQ")
+                                    .foregroundStyle(Color("TextColor"))
+                                    .padding(10)
+                                    .font(.body)
+                            }
+                        }
                     }
                 }
             }
