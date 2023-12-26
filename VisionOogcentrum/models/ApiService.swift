@@ -4,7 +4,7 @@ class ApiService {
     static let shared = ApiService()
     
 //    self signed certificate
-    private let baseURL = "https://localhost:7181/api"
+    private let baseURL = "https://localhost:5001/api"
     
     private init() {}
     

@@ -33,17 +33,18 @@ struct HomeButtons: View {
                             })
                         }
                     }
-                    ZStack {
-                        let base = RoundedRectangle(cornerRadius: 12)
-                        Group {
-                            base.fill(Color("BackgroundColor"))
-                            Button(action: {}, label: {
-                                Text("Afspraak bekijken")
+                    NavigationLink(destination: ContactView()) {
+                        ZStack {
+                            let base = RoundedRectangle(cornerRadius: 12)
+                            Group {
+                                base.fill(Color("BackgroundColor"))
+                                Text("Contact")
                                     .foregroundStyle(Color("TextColor"))
                                     .padding(10)
                                     .font(.body)
-                            })
+                            }
                         }
+                        .buttonStyle(PlainButtonStyle())
                     }
                     NavigationLink(destination: TeamView()) {
                         ZStack {

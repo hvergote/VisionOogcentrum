@@ -19,10 +19,6 @@ struct ContentView: View {
                     .tabItem {
                         Image(systemName: "calendar.badge.plus")
                     }
-                Text("Stel je vragen hier")
-                    .tabItem {
-                        Image (systemName: "text.bubble")
-                    }
             }
             .foregroundStyle(Color("TextColor"))
             .font(.largeTitle)
