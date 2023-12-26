@@ -33,7 +33,7 @@ struct HomeButtons: View {
                             })
                         }
                     }
-                    NavigationLink(destination: ContactView()) {
+                    NavigationLink(destination: ContactView().font(.body)) {
                         ZStack {
                             let base = RoundedRectangle(cornerRadius: 12)
                             Group {
