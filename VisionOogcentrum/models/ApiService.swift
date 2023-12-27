@@ -22,6 +22,20 @@ class ApiService {
         return try decoder.decode(GebruikerResponse.self, from: data)
     }
     
+    func postPatiënt(patiënt: Patiënt) async throws -> PatiëntResponse {
+        let url = URL(string: "\(baseURL)/patient")!
+        var request = URLRequest(url: url)
+        request.httpMethod = "POST"
+        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        
+        let encoder = JSONEncoder()
+        request.httpBody = try encoder.encode(patiënt)
+        
+        let (data, _) = try await URLSession.shared.data(for: request)
+        let decoder = JSONDecoder()
+        return try decoder.decode(PatiëntResponse.self, from: data)
+    }
+    
     func getArtikels() async throws -> [Artikel] {
         let data = try await urlSession("\(baseURL)/artikel")
         do {

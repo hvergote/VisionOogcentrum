@@ -9,8 +9,8 @@ struct AfspraakBevestigingView: View {
     @State var email: String = ""
     @State var telefoonnummer: String = ""
     @State var straat: String = ""
-    @State var huisnummer: String = ""
-    @State var postcode: String = ""
+    @State var huisnummer: Int = 0
+    @State var postcode: Int = 0
     @State var stad: String = ""
     @State var extraInfo: String = ""
     
@@ -30,10 +30,18 @@ struct AfspraakBevestigingView: View {
                 Section(header: Text("Adres: ")) {
                     TextField("Straat", text: $straat)
                         .font(.body)
-                    TextField("Huisnummer", text: $huisnummer)
-                        .font(.body)
-                    TextField("Postcode", text: $postcode)
-                        .font(.body)
+                    TextField("Huisnummer", text: Binding(get: {
+                        String(huisnummer)
+                    }, set: {
+                        huisnummer = Int($0) ?? 0
+                    }))
+                    .font(.body)
+                    TextField("Postcode", text: Binding(get: {
+                        String(postcode)
+                    }, set: {
+                        postcode = Int($0) ?? 0
+                    }))
+                    .font(.body)
                     TextField("Stad", text: $stad)
                         .font(.body)
                 }
@@ -45,12 +53,13 @@ struct AfspraakBevestigingView: View {
                     Task {
                         do {
                             _ = try await viewModel.postGebruiker(naam: naam, voornaam: voornaam)
+                            _ = try await viewModel.postPatiënt(telefoonnummer: telefoonnummer, email: email, straat: straat, huisnummer: huisnummer, stad: stad, postcode: postcode)
                         } catch {
                             print("Error: \(error)")
                         }
                     }
                 }
-
+                
             }
             .navigationTitle("Afspraak Bevestiging")
         }

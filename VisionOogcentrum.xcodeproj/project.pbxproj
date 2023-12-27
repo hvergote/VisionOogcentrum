@@ -25,6 +25,7 @@
 		FC1AA52C2B3B3BEA00E6AE23 /* AfsbraakBevestigingsScherm.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1AA52B2B3B3BEA00E6AE23 /* AfsbraakBevestigingsScherm.swift */; };
 		FC1AA52E2B3B927800E6AE23 /* AfspraakViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1AA52D2B3B927800E6AE23 /* AfspraakViewModel.swift */; };
 		FC1AA5302B3B92A000E6AE23 /* AfspraakRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1AA52F2B3B92A000E6AE23 /* AfspraakRepository.swift */; };
+		FC1AA5322B3C6CB000E6AE23 /* Patiënt.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1AA5312B3C6CB000E6AE23 /* Patiënt.swift */; };
 		FCB214352B03FE1700176D22 /* DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB214342B03FE1700176D22 /* DataSource.swift */; };
 		FCB214372B03FE5B00176D22 /* Artikel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB214362B03FE5B00176D22 /* Artikel.swift */; };
 		FCB214392B03FE7800176D22 /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB214382B03FE7800176D22 /* ApiService.swift */; };
@@ -61,6 +62,7 @@
 		FC1AA52B2B3B3BEA00E6AE23 /* AfsbraakBevestigingsScherm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AfsbraakBevestigingsScherm.swift; sourceTree = "<group>"; };
 		FC1AA52D2B3B927800E6AE23 /* AfspraakViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AfspraakViewModel.swift; sourceTree = "<group>"; };
 		FC1AA52F2B3B92A000E6AE23 /* AfspraakRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AfspraakRepository.swift; sourceTree = "<group>"; };
+		FC1AA5312B3C6CB000E6AE23 /* Patiënt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Patiënt.swift"; sourceTree = "<group>"; };
 		FCB214342B03FE1700176D22 /* DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSource.swift; sourceTree = "<group>"; };
 		FCB214362B03FE5B00176D22 /* Artikel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Artikel.swift; sourceTree = "<group>"; };
 		FCB214382B03FE7800176D22 /* ApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ApiService.swift; path = VisionOogcentrum/models/ApiService.swift; sourceTree = SOURCE_ROOT; };
@@ -170,6 +172,7 @@
 				9021E2AA2B14E86400FB477B /* Team.swift */,
 				901B761A2B1F6AFE0042A2E0 /* FAQ.swift */,
 				FC1AA5292B3B3B9500E6AE23 /* Gebruiker.swift */,
+				FC1AA5312B3C6CB000E6AE23 /* Patiënt.swift */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -296,6 +299,7 @@
 				FCB214522B0E68D300176D22 /* ArtsViewModel.swift in Sources */,
 				FCB214502B0E686100176D22 /* ArtsRepository.swift in Sources */,
 				907E1DC52B1F81E8001E1935 /* faqRepository.swift in Sources */,
+				FC1AA5322B3C6CB000E6AE23 /* Patiënt.swift in Sources */,
 				901B761E2B1F73060042A2E0 /* FAQView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
