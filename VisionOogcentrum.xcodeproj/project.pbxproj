@@ -21,6 +21,10 @@
 		90CF72D52AE16C5E007C16AE /* HomeButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90CF72D42AE16C5E007C16AE /* HomeButtons.swift */; };
 		90CF72D72AE16CA8007C16AE /* TopBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90CF72D62AE16CA8007C16AE /* TopBar.swift */; };
 		90D0AB912AE1303500CC7A05 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D0AB902AE1303500CC7A05 /* HomeView.swift */; };
+		FC1AA52A2B3B3B9500E6AE23 /* Gebruiker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1AA5292B3B3B9500E6AE23 /* Gebruiker.swift */; };
+		FC1AA52C2B3B3BEA00E6AE23 /* AfsbraakBevestigingsScherm.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1AA52B2B3B3BEA00E6AE23 /* AfsbraakBevestigingsScherm.swift */; };
+		FC1AA52E2B3B927800E6AE23 /* AfspraakViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1AA52D2B3B927800E6AE23 /* AfspraakViewModel.swift */; };
+		FC1AA5302B3B92A000E6AE23 /* AfspraakRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1AA52F2B3B92A000E6AE23 /* AfspraakRepository.swift */; };
 		FCB214352B03FE1700176D22 /* DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB214342B03FE1700176D22 /* DataSource.swift */; };
 		FCB214372B03FE5B00176D22 /* Artikel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB214362B03FE5B00176D22 /* Artikel.swift */; };
 		FCB214392B03FE7800176D22 /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB214382B03FE7800176D22 /* ApiService.swift */; };
@@ -53,6 +57,10 @@
 		90CF72D42AE16C5E007C16AE /* HomeButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeButtons.swift; sourceTree = "<group>"; };
 		90CF72D62AE16CA8007C16AE /* TopBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopBar.swift; sourceTree = "<group>"; };
 		90D0AB902AE1303500CC7A05 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		FC1AA5292B3B3B9500E6AE23 /* Gebruiker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gebruiker.swift; sourceTree = "<group>"; };
+		FC1AA52B2B3B3BEA00E6AE23 /* AfsbraakBevestigingsScherm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AfsbraakBevestigingsScherm.swift; sourceTree = "<group>"; };
+		FC1AA52D2B3B927800E6AE23 /* AfspraakViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AfspraakViewModel.swift; sourceTree = "<group>"; };
+		FC1AA52F2B3B92A000E6AE23 /* AfspraakRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AfspraakRepository.swift; sourceTree = "<group>"; };
 		FCB214342B03FE1700176D22 /* DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSource.swift; sourceTree = "<group>"; };
 		FCB214362B03FE5B00176D22 /* Artikel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Artikel.swift; sourceTree = "<group>"; };
 		FCB214382B03FE7800176D22 /* ApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ApiService.swift; path = VisionOogcentrum/models/ApiService.swift; sourceTree = SOURCE_ROOT; };
@@ -128,6 +136,7 @@
 				FCB214492B0E4A5500176D22 /* OogZiekteRepository.swift */,
 				FCB2144F2B0E686100176D22 /* ArtsRepository.swift */,
 				907E1DC42B1F81E8001E1935 /* faqRepository.swift */,
+				FC1AA52F2B3B92A000E6AE23 /* AfspraakRepository.swift */,
 			);
 			path = data;
 			sourceTree = "<group>";
@@ -139,6 +148,7 @@
 				FCB2144B2B0E4B0B00176D22 /* OogZiekteViewModel.swift */,
 				FCB214512B0E68D300176D22 /* ArtsViewModel.swift */,
 				907E1DC22B1F8198001E1935 /* FAQViewModel.swift */,
+				FC1AA52D2B3B927800E6AE23 /* AfspraakViewModel.swift */,
 			);
 			path = viewModels;
 			sourceTree = "<group>";
@@ -159,6 +169,7 @@
 				FCB2144D2B0E674700176D22 /* Arts.swift */,
 				9021E2AA2B14E86400FB477B /* Team.swift */,
 				901B761A2B1F6AFE0042A2E0 /* FAQ.swift */,
+				FC1AA5292B3B3B9500E6AE23 /* Gebruiker.swift */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -175,6 +186,7 @@
 				9021E2AC2B14E88800FB477B /* TeamView.swift */,
 				901B761D2B1F73060042A2E0 /* FAQView.swift */,
 				907F45102B3AD3A8004034E9 /* ContactView.swift */,
+				FC1AA52B2B3B3BEA00E6AE23 /* AfsbraakBevestigingsScherm.swift */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -259,6 +271,7 @@
 				FCB2144C2B0E4B0B00176D22 /* OogZiekteViewModel.swift in Sources */,
 				FCB214442B0E46E400176D22 /* AandoeningenView.swift in Sources */,
 				9021E2AB2B14E86400FB477B /* Team.swift in Sources */,
+				FC1AA52C2B3B3BEA00E6AE23 /* AfsbraakBevestigingsScherm.swift in Sources */,
 				907F45112B3AD3A8004034E9 /* ContactView.swift in Sources */,
 				FCB214352B03FE1700176D22 /* DataSource.swift in Sources */,
 				907E1DC32B1F8198001E1935 /* FAQViewModel.swift in Sources */,
@@ -266,6 +279,7 @@
 				FCB214402B0CE29F00176D22 /* ArtikelRepository.swift in Sources */,
 				FCB214372B03FE5B00176D22 /* Artikel.swift in Sources */,
 				9021E2AD2B14E88800FB477B /* TeamView.swift in Sources */,
+				FC1AA52A2B3B3B9500E6AE23 /* Gebruiker.swift in Sources */,
 				90D0AB912AE1303500CC7A05 /* HomeView.swift in Sources */,
 				FCB214392B03FE7800176D22 /* ApiService.swift in Sources */,
 				FCB2143C2B03FE9700176D22 /* ArtikelViewModel.swift in Sources */,
@@ -273,10 +287,12 @@
 				FCB2144A2B0E4A5500176D22 /* OogZiekteRepository.swift in Sources */,
 				FCB214482B0E476C00176D22 /* OogZiekte.swift in Sources */,
 				90CF72D72AE16CA8007C16AE /* TopBar.swift in Sources */,
+				FC1AA52E2B3B927800E6AE23 /* AfspraakViewModel.swift in Sources */,
 				900F9A422AD85B5A006C1976 /* ContentView.swift in Sources */,
 				900F9A402AD85B5A006C1976 /* VisionOogcentrumApp.swift in Sources */,
 				FCB2143E2B03FEE800176D22 /* NieuwsView.swift in Sources */,
 				FCB2144E2B0E674700176D22 /* Arts.swift in Sources */,
+				FC1AA5302B3B92A000E6AE23 /* AfspraakRepository.swift in Sources */,
 				FCB214522B0E68D300176D22 /* ArtsViewModel.swift in Sources */,
 				FCB214502B0E686100176D22 /* ArtsRepository.swift in Sources */,
 				907E1DC52B1F81E8001E1935 /* faqRepository.swift in Sources */,
@@ -414,7 +430,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"VisionOogcentrum/Preview Content\"";
-				DEVELOPMENT_TEAM = QH4N3LDSXQ;
+				DEVELOPMENT_TEAM = 3AKN4G6B7A;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = VisionOogcentrum/Info.plist;
@@ -444,7 +460,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"VisionOogcentrum/Preview Content\"";
-				DEVELOPMENT_TEAM = QH4N3LDSXQ;
+				DEVELOPMENT_TEAM = 3AKN4G6B7A;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = VisionOogcentrum/Info.plist;

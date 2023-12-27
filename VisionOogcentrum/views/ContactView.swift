@@ -10,6 +10,11 @@ import MapKit
 
 struct ContactView: View {
     let praktijkLocatie = CLLocationCoordinate2D(latitude: 51.075526, longitude: 3.780589)
+    @State 
+    private var region = MKCoordinateRegion(
+        center: CLLocationCoordinate2D(latitude: 51.075526, longitude: 3.780589),
+        span: MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1)
+    )
 
     
     var body: some View {
@@ -29,10 +34,16 @@ struct ContactView: View {
                     .underline()
 
                 Text("+32 470 12 34 56")
-
+                
+                //Map with a zoom of 0.1
                 Map {
-                    Marker("Praktijk", systemImage: "ev.plug.dc.nacs", coordinate: praktijkLocatie)
-                }
+                       Marker("Praktijk", systemImage: "ev.plug.dc.nacs", coordinate: praktijkLocatie)
+                   }
+                    .frame(height: 200)
+                    .cornerRadius(10)
+                    .overlay(RoundedRectangle(cornerRadius: 10).stroke(Color.gray, lineWidth: 1))
+                    
+
                 .frame(height: 200)
                 .cornerRadius(10)
                 .overlay(RoundedRectangle(cornerRadius: 10).stroke(Color.gray, lineWidth: 1))

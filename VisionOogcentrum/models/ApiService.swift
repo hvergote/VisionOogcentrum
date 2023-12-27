@@ -8,6 +8,20 @@ class ApiService {
     
     private init() {}
     
+    func postGebruiker(gebruiker: Gebruiker) async throws -> GebruikerResponse {
+        let url = URL(string: "\(baseURL)/gebruiker")!
+        var request = URLRequest(url: url)
+        request.httpMethod = "POST"
+        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+
+        let encoder = JSONEncoder()
+        request.httpBody = try encoder.encode(gebruiker)
+
+        let (data, _) = try await URLSession.shared.data(for: request)
+        let decoder = JSONDecoder()
+        return try decoder.decode(GebruikerResponse.self, from: data)
+    }
+    
     func getArtikels() async throws -> [Artikel] {
         let data = try await urlSession("\(baseURL)/artikel")
         do {
@@ -31,9 +45,6 @@ class ApiService {
     }
     
     func getArtsen() async throws -> [Arts] {
-//        let url = URL(string: "\(baseURL)/arts")!
-//
-//        let (data, _) = try await URLSession.shared.data(from: url)
         let data = try await urlSession("\(baseURL)/arts")
         do {
             let decoded = try JSONDecoder().decode([Arts].self, from: data)

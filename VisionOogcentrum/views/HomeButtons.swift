@@ -21,18 +21,16 @@ struct HomeButtons: View {
                     GridItem(.fixed(170)),
                     GridItem(.fixed(170))
                 ], spacing: 5) {
-                    ZStack {
-                        let base = RoundedRectangle(cornerRadius: 12)
-                        Group {
-                            base.fill(Color("BackgroundColor"))
-                            Button(action: {}, label: {
-                                Text("Afspraak maken")
-                                    .foregroundStyle(Color("TextColor"))
-                                    .padding(10)
-                                    .font(.body)
-                            })
-                        }
-                    }
+                    NavigationLink(destination: AfspraakBevestigingView()) {
+                          RoundedRectangle(cornerRadius: 12)
+                              .fill(Color("BackgroundColor"))
+                              .overlay(
+                                  Text("Afspraak maken")
+                                      .foregroundStyle(Color("TextColor"))
+                                      .padding(10)
+                                      .font(.body)
+                              )
+                      }
                     NavigationLink(destination: ContactView().font(.body)) {
                         ZStack {
                             let base = RoundedRectangle(cornerRadius: 12)
