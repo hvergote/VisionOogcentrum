@@ -12,7 +12,7 @@ struct AandoeningenView: View {
     @StateObject private var viewModel = OogZiekteViewModel()
     var body: some View {
         ScrollView {
-            LazyVStack {
+            LazyVGrid(columns: [GridItem(.adaptive(minimum: 200))]) {
                 ForEach(viewModel.oogziektes) { oogziekte in
                     AandoeningView(oogziekte: oogziekte)
                         .onTapGesture {
@@ -39,14 +39,16 @@ struct AandoeningenView: View {
 struct AandoeningView: View {
     var oogziekte: OogZiekte
     var body: some View {
-        VStack(alignment: .leading) {
-            Text(oogziekte.titel)
-                .font(.headline)
+        ZStack {
+            let base = RoundedRectangle(cornerRadius: 8)
+            Group {
+                base.shadow(radius: 4)
+                base.fill(Color("BackgroundColor"))
+                Text(oogziekte.titel)
+                    .font(.headline)
+                    .padding()
+}
         }
-        .padding()
-        .background(Color("BackgroundColor"))
-        .cornerRadius(8)
-        .shadow(radius: 4)
     }
 }
 

@@ -19,7 +19,7 @@ class DataSource {
         Artikel(id: "2e3e59c2-24cf-4e3c-a703-12017cfe15d8", titel: "title10", text: "Lorem ipsum dolor sit amet...", image: "https://example.com/image10.jpg", created: "21/11/2023")
     ]
     public let OogZiektes: [OogZiekte] = [
-        OogZiekte(id: "6403f885-9b4c-4037-a079-76b03e199e3e", titel: "Myopie", beschrijving: "Myopie, ook wel bijziendheid genoemd, is een oogafwijking waarbij je dichtbij goed kunt zien, maar objecten op afstand wazig lijken. Dit gebeurt wanneer de oogbol te lang is of het hoornvlies (het heldere voorste deel van het oog) te veel kromming heeft. Hierdoor wordt het invallende licht niet correct gefocust op het netvlies, het lichtgevoelige weefsel aan de achterkant van het oog.", specialisatieId: "d498f2ea-8201-42ce-b7c1-b1a9db077f3a", specialisatie: "Lasik", behandeling: "Lasik")
+        OogZiekte(id: "6403f885-9b4c-4037-a079-76b03e199e3e", titel: "Myopie", beschrijving: "Myopie, ook wel bijziendheid genoemd, is een oogafwijking waarbij je dichtbij goed kunt zien, maar objecten op afstand wazig lijken. Dit gebeurt wanneer de oogbol te lang is of het hoornvlies (het heldere voorste deel van het oog) te veel kromming heeft. Hierdoor wordt het invallende licht niet correct gefocust op het netvlies, het lichtgevoelige weefsel aan de achterkant van het oog.", behandeling: "Lasik")
     ]
     
     public let team: [Team] = [
