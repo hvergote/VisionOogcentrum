@@ -9,20 +9,23 @@ import Foundation
 import Combine
 import SwiftUI
 
-class AfspraakViewModel: ObservableObject{
+class AfspraakViewModel: ObservableObject {
     
     private let afspraakRepository: AfspraakRepository
     @Published var gebruikerResponse: GebruikerResponse?
+    @Published var patiëntResponse: PatiëntResponse?
 
     init() {
         self.afspraakRepository = NetworkAfspraakRepository()
     }
     
     func postGebruiker(naam: String, voornaam: String) async throws -> GebruikerResponse {
-        let gebruiker = Gebruiker(naam: naam, voornaam: voornaam)
+        let gebruiker = GebruikerPush(naam: naam, voornaam: voornaam)
         do {
-            let response = try await afspraakRepository.postGebruiker(gebruiker: gebruiker)
-            gebruikerResponse = response
+            let response = try await afspraakRepository.postGebruiker(gebruikerPush: gebruiker)
+            DispatchQueue.main.async {
+                self.gebruikerResponse = response
+            }
             return response
         } catch {
             print("Error: \(error)")
@@ -39,10 +42,12 @@ class AfspraakViewModel: ObservableObject{
         
         do {
             let response = try await afspraakRepository.postPatiënt(patiënt: patiënt)
+            DispatchQueue.main.async {
+                self.patiëntResponse = response
+            }
         } catch {
             print("Error posting Patiënt: \(error)")
             throw error
         }
     }
-
 }

@@ -2,14 +2,16 @@ struct ArtsResponse: Decodable {
     let result: [Arts]
 }
 
-struct Arts: Identifiable, Decodable {
+struct Arts: Codable {
     let id: String
     let gebruiker: Gebruiker
     let profilePicture: String
-    let specialisaties: [Specialisatie]?
+    let specialisaties: [Specialisatie]
+    let afspraken: [Afspraak]
     let info: String
 }
 
-struct Specialisatie: Decodable {
+struct Specialisatie: Codable {
     let naam: String
+    let oogziektes: [OogZiekte]
 }

@@ -21,7 +21,7 @@ struct HomeButtons: View {
                     GridItem(.fixed(170)),
                     GridItem(.fixed(170))
                 ], spacing: 5) {
-                    NavigationLink(destination: AfspraakBevestigingView()) {
+                    NavigationLink(destination: AfspraakMakenScherm()) {
                           RoundedRectangle(cornerRadius: 12)
                               .fill(Color("BackgroundColor"))
                               .overlay(
