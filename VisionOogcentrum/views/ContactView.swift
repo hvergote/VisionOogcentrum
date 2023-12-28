@@ -61,6 +61,7 @@ struct ContactView: View {
             }
             .padding(20)
         }
+        .navigationTitle("Contact")
     }
 }
 

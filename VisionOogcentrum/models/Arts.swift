@@ -7,6 +7,7 @@ struct Arts: Identifiable, Decodable {
     let gebruiker: Gebruiker
     let profilePicture: String
     let specialisaties: [Specialisatie]?
+    let info: String
 }
 
 struct Specialisatie: Decodable {
