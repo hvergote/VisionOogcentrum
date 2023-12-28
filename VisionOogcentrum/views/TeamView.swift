@@ -7,27 +7,35 @@
 import SwiftUI
 struct TeamView: View {
     let datasource = DataSource()
+    @StateObject private var viewModel = ArtsViewModel()
     var body: some View {
         ScrollView {
-            LazyVGrid(columns: [GridItem(.adaptive(minimum: 200))]) {
-                ForEach(datasource.team) { persoon in
+            LazyVGrid(columns: [
+                GridItem(.adaptive(minimum: 200))
+            ]) {
+                ForEach(viewModel.artsen) { persoon in
                     TeamPersoonView(persoon: persoon)
                 }
+            }
+        }
+        .onAppear {
+            Task {
+                await viewModel.fetchArtsen()
             }
         }
             .navigationTitle("Team")
     }
 }
 struct TeamPersoonView: View {
-    var persoon: Team
+    var persoon: Arts
 
     var body: some View {
         VStack(spacing: 10) {
-            Text(persoon.voornaam + " " + persoon.naam)
+            Text(persoon.gebruiker.voornaam + " " + persoon.gebruiker.naam)
                 .font(.title)
                 .foregroundColor(.primary)
             
-            AsyncImage(url: persoon.image) { phase in
+            AsyncImage(url: URL(string: persoon.profilePicture)) { phase in
                 switch phase {
                 case .success(let image):
                     image
@@ -38,6 +46,8 @@ struct TeamPersoonView: View {
                 case .failure:
                     Color.gray
                 case .empty:
+                    ProgressView()
+                @unknown default:
                     ProgressView()
                 }
             }
