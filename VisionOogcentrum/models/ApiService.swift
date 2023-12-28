@@ -4,18 +4,18 @@ class ApiService {
     static let shared = ApiService()
     
 //    self signed certificate
-    private let baseURL = "https://localhost:5001/api"
+    private let baseURL = "https://ac45-193-191-158-19.ngrok-free.app/api"
     
     private init() {}
     
-    func postGebruiker(gebruiker: Gebruiker) async throws -> GebruikerResponse {
+    func postGebruiker(gebruikerPush: GebruikerPush) async throws -> GebruikerResponse {
         let url = URL(string: "\(baseURL)/gebruiker")!
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
 
         let encoder = JSONEncoder()
-        request.httpBody = try encoder.encode(gebruiker)
+        request.httpBody = try encoder.encode(gebruikerPush)
 
         let (data, _) = try await URLSession.shared.data(for: request)
         let decoder = JSONDecoder()
@@ -62,9 +62,11 @@ class ApiService {
         let data = try await urlSession("\(baseURL)/arts")
         do {
             let decoded = try JSONDecoder().decode([Arts].self, from: data)
+            print("test" , decoded)
+
             return decoded
         } catch {
-            print("Error decoding oogziektes: \(error)")
+            print("Error decoding artsen: \(error)")
             throw error
         }
     }

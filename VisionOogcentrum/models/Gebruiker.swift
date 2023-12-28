@@ -1,5 +1,10 @@
 struct Gebruiker: Codable {
-    //let id: String
+    let id: String?
+    let naam: String
+    let voornaam: String
+}
+
+struct GebruikerPush: Codable {
     let naam: String
     let voornaam: String
 }
