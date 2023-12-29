@@ -2,7 +2,7 @@ struct ArtsResponse: Decodable {
     let result: [Arts]
 }
 
-struct Arts: Codable {
+struct Arts: Identifiable, Codable {
     let id: String
     let gebruiker: Gebruiker
     let profilePicture: String

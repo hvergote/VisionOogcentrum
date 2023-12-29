@@ -4,7 +4,8 @@ class ApiService {
     static let shared = ApiService()
     
 //    self signed certificate
-    private let baseURL = "https://ac45-193-191-158-19.ngrok-free.app/api"
+//    private let baseURL = "https://ac45-193-191-158-19.ngrok-free.app/api"
+    private let baseURL = "https://localhost:5001/api"
     
     private init() {}
     
@@ -62,7 +63,7 @@ class ApiService {
         let data = try await urlSession("\(baseURL)/arts")
         do {
             let decoded = try JSONDecoder().decode([Arts].self, from: data)
-            print("test" , decoded)
+//            print("test" , decoded)
 
             return decoded
         } catch {
@@ -78,6 +79,17 @@ class ApiService {
             return decoded
         } catch {
             print("Error decoding FAQ: \(error)")
+            throw error
+        }
+    }
+    
+    func getAfsprakenByArtsId(id: String) async throws -> [Afspraak] {
+        let data = try await urlSession("\(baseURL)/afspraak/\(id)")
+        do {
+            let decoded = try JSONDecoder().decode([Afspraak].self, from: data)
+            return decoded
+        } catch {
+            print("Error decoding afspraken: \(error)")
             throw error
         }
     }

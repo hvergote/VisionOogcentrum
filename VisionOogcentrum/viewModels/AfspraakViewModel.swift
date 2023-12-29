@@ -14,6 +14,7 @@ class AfspraakViewModel: ObservableObject {
     private let afspraakRepository: AfspraakRepository
     @Published var gebruikerResponse: GebruikerResponse?
     @Published var patiëntResponse: PatiëntResponse?
+    @Published var afsprakenByArtsId: [Afspraak] = []
 
     init() {
         self.afspraakRepository = NetworkAfspraakRepository()
@@ -50,4 +51,26 @@ class AfspraakViewModel: ObservableObject {
             throw error
         }
     }
+    
+    func getAfsprakenByArtsId(id: String) async {
+        do {
+            let response = try await afspraakRepository.getAfsprakenByArtsId(id: id)
+            DispatchQueue.main.async {
+                self.afsprakenByArtsId = response
+            }
+        } catch {
+            print(error)
+        }
+    }
+    
+//    func fetchAfspraken() async {
+//        do {
+//            let fetchedAfspraken = try await afspraakRepository
+//            DispatchQueue.main.async {
+//                self.artikels = fetchedArtikels
+//            }
+//        } catch {
+//            print("Error fetching artikels: \(error)")
+//        }
+//    }
 }
