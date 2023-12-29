@@ -9,6 +9,7 @@ struct AfspraakMakenScherm: View {
     @State private var isAfspraakBevestigenSchermPresented = false
     @State private var chosenDate = Date()
     @State private var selectedArtsIndex = 0
+    @State private var selectedArtsId = ""
     @State private var selectedTijdstipIndex = 0
     @State var timeSlots: [Date] = []
     
@@ -31,7 +32,13 @@ struct AfspraakMakenScherm: View {
                         }
                     }
                     .pickerStyle(.wheel)
+                }.onChange(of: selectedArtsIndex) {
+                    Task {
+                        selectedArtsId = artsViewModel.artsen[selectedArtsIndex].id
+                        await afspraakViewModel.getAfsprakenByArtsId(id: selectedArtsId)
+                        timeSlots = loadTimeslots()
                     }
+                }
                 
                 Section(header: Text("Kies een tijdstip").font(.body)) {
                     Picker("Tijdstip", selection: $selectedTijdstipIndex) {
@@ -52,7 +59,8 @@ struct AfspraakMakenScherm: View {
             .onAppear {
                 Task {
                     await artsViewModel.fetchArtsen()
-                    await afspraakViewModel.getAfsprakenByArtsId(id: "ee4c0b26-4046-4f5a-8ae4-ccadcba53544")
+                    selectedArtsId = artsViewModel.artsen[selectedArtsIndex].id
+                    await afspraakViewModel.getAfsprakenByArtsId(id: selectedArtsId)
                     timeSlots = loadTimeslots()
                 }
             }
@@ -81,9 +89,6 @@ struct AfspraakMakenScherm: View {
                     afspraakDatum = datumFormatter2.date(from: afspraak.datum)
                 }
                 if (calendar.isDate(afspraakDatum!, equalTo: currentDate, toGranularity: .minute)) {
-                    print("afspraak is gelijk")
-                    print(currentDate)
-                    print("===================")
                     return true
                 }
                 return false
