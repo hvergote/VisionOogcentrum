@@ -17,7 +17,7 @@ struct AfspraakBevestigingView: View {
     var body: some View {
         NavigationView {
             Form {
-                Section(header: Text("Gegevens: ")) {
+                Section(header: Text("Gegevens: ").font(.headline)) {
                     TextField("Naam", text: $naam)
                         .font(.body)
                     TextField("Voornaam", text: $voornaam)
@@ -27,7 +27,7 @@ struct AfspraakBevestigingView: View {
                     TextField("Telefoonnummer", text: $telefoonnummer)
                         .font(.body)
                 }
-                Section(header: Text("Adres: ")) {
+                Section(header: Text("Adres: ").font(.headline)) {
                     TextField("Straat", text: $straat)
                         .font(.body)
                     TextField("Huisnummer", text: Binding(get: {
@@ -45,11 +45,11 @@ struct AfspraakBevestigingView: View {
                     TextField("Stad", text: $stad)
                         .font(.body)
                 }
-                Section(header: Text("Extra informatie: ")) {
+                Section(header: Text("Extra informatie: ").font(.headline)) {
                     TextField("Exta informatie: ", text: $extraInfo)
                         .font(.body)
                 }
-                Button("Submit") {
+                Button(action: {
                     Task {
                         do {
                             _ = try await viewModel.postGebruiker(naam: naam, voornaam: voornaam)
@@ -59,7 +59,9 @@ struct AfspraakBevestigingView: View {
                             print("Error: \(error)")
                         }
                     }
-                }
+                }, label: {
+                    Text("Submit").font(.body)
+                })
             }
             .navigationTitle("Afspraak Bevestiging")
         }

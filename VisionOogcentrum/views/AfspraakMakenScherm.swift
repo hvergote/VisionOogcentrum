@@ -68,8 +68,8 @@ struct AfspraakMakenScherm: View {
                     timeSlots = loadTimeslots()
                 }
             }
+            .navigationTitle("Afspraak maken")
         }
-        .navigationTitle("Afspraak maken")
     }
     
     func loadTimeslots() -> [Date] {
