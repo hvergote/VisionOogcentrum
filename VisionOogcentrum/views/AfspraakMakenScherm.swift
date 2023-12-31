@@ -22,6 +22,7 @@ struct AfspraakMakenScherm: View {
                         .padding()
                         .font(.body)
                 }.onChange(of: chosenDate) {
+                    afspraakViewModel.updateData(date: chosenDate)
                     timeSlots = loadTimeslots()
                 }
 

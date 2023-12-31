@@ -14,7 +14,11 @@ class AfspraakViewModel: ObservableObject {
     private let afspraakRepository: AfspraakRepository
     @Published var gebruikerResponse: GebruikerResponse?
     @Published var patiëntResponse: PatiëntResponse?
+//    @Published var afspraakResponse: AfspraakResponse?
     @Published var afsprakenByArtsId: [Afspraak] = []
+    var selectedDate: Date = Date.now
+    var selectedArts: String = ""
+    @Published var timeSlots: [Date] = []
 
     init() {
         self.afspraakRepository = NetworkAfspraakRepository()
@@ -29,7 +33,7 @@ class AfspraakViewModel: ObservableObject {
             }
             return response
         } catch {
-            print("Error: \(error)")
+            print("🧑 Error posting Gebruiker: \(error)")
             throw error
         }
     }
@@ -47,12 +51,29 @@ class AfspraakViewModel: ObservableObject {
                 self.patiëntResponse = response
             }
         } catch {
-            print("Error posting Patiënt: \(error)")
+            print("🤒 Error posting Patiënt: \(error)")
             throw error
         }
     }
     
+    func postAfspraak(datum: Date, extraInfo: String?, artsId: String) async throws {
+        let datumFormatter = DateFormatter()
+        datumFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSSSSS"
+        let afspraak = AfspraakPush(datum: datumFormatter.string(from: datum), extraInfo: extraInfo, startTijd: "00:00:00", eindTijd: "00:00:00", patientId: patiëntResponse?.patientId ?? "", artsId: selectedArts)
+        do {
+            try await afspraakRepository.postAfspraak(afspraak: afspraak)
+//            DispatchQueue.main.async {
+//                self.afspraakResponse = response
+//            }
+        } catch {
+            print("📅 Error posting Afspraak: \(error)")
+            throw error
+            
+        }
+    }
+    
     func getAfsprakenByArtsId(id: String) async {
+        selectedArts = id
         do {
             let response = try await afspraakRepository.getAfsprakenByArtsId(id: id)
             DispatchQueue.main.async {
@@ -63,14 +84,42 @@ class AfspraakViewModel: ObservableObject {
         }
     }
     
-//    func fetchAfspraken() async {
-//        do {
-//            let fetchedAfspraken = try await afspraakRepository
-//            DispatchQueue.main.async {
-//                self.artikels = fetchedArtikels
-//            }
-//        } catch {
-//            print("Error fetching artikels: \(error)")
-//        }
-//    }
+    func updateData(date: Date) {
+        selectedDate = date
+        timeSlots = loadTimeslots(date)
+    }
+    
+    func loadTimeslots(_ date: Date) -> [Date] {
+        var timeSlots: [Date] = []
+        
+        let calendar = Calendar.current
+        var currentDate = calendar.date(bySettingHour: 8, minute: 0, second: 0, of: date) ?? Date()
+        
+        let endOfDay = calendar.date(bySettingHour: 18, minute: 0, second: 0, of: date) ?? Date()
+        
+        let afspraken = self.afsprakenByArtsId
+        let datumFormatter = DateFormatter()
+        datumFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss"
+        let datumFormatter2 = DateFormatter()
+        datumFormatter2.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSSSSS"
+        
+        while currentDate < endOfDay {
+            let conflict = afspraken.filter { afspraak in
+                var afspraakDatum = datumFormatter.date(from: afspraak.datum)
+                if (afspraakDatum == nil) {
+                    afspraakDatum = datumFormatter2.date(from: afspraak.datum)
+                }
+                if (calendar.isDate(afspraakDatum!, equalTo: currentDate, toGranularity: .minute)) {
+                    return true
+                }
+                return false
+
+            }
+            if conflict.isEmpty {
+                timeSlots.append(currentDate)
+            }
+            currentDate = calendar.date(byAdding: .minute, value: 15, to: currentDate) ?? Date()
+        }
+        return timeSlots
+    }
 }
