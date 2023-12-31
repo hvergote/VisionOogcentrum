@@ -36,11 +36,18 @@ class ApiService {
         request.httpBody = try encoder.encode(patiënt)
         
         let (data, _) = try await URLSession.shared.data(for: request)
-        let decoder = JSONDecoder()
-        return try decoder.decode(PatiëntResponse.self, from: data)
+        let decoderb = JSONDecoder()
+        return try decoderb.decode(PatiëntResponse.self, from: data)
     }
     
     func postAfspraak(afspraak: AfspraakPush) async throws {
+        print("post afspraak")
+        print("datum: \(afspraak.datum)")
+        print("extra info: \(afspraak.extraInfo)")
+        print("startTijd: \(afspraak.startTijd)")
+        print("eindTijd: \(afspraak.eindTijd)")
+        print("patientId: \(afspraak.patientId)")
+        print("artsId: \(afspraak.artsId)")
         let url = URL(string: "\(baseURL)/afspraak")!
         var request = URLRequest(url: url)
         request.httpMethod = "POST"

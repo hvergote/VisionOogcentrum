@@ -16,7 +16,7 @@ class AfspraakViewModel: ObservableObject {
     @Published var patiëntResponse: PatiëntResponse?
 //    @Published var afspraakResponse: AfspraakResponse?
     @Published var afsprakenByArtsId: [Afspraak] = []
-    var selectedDate: Date = Date.now
+    var selectedDate = Date()
     var selectedArts: String = ""
     @Published var timeSlots: [Date] = []
 
@@ -47,6 +47,7 @@ class AfspraakViewModel: ObservableObject {
         
         do {
             let response = try await afspraakRepository.postPatiënt(patiënt: patiënt)
+            print("🤒 patientId: \(response.patientId)")
             DispatchQueue.main.async {
                 self.patiëntResponse = response
             }
@@ -59,7 +60,9 @@ class AfspraakViewModel: ObservableObject {
     func postAfspraak(datum: Date, extraInfo: String?, artsId: String) async throws {
         let datumFormatter = DateFormatter()
         datumFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSSSSS"
-        let afspraak = AfspraakPush(datum: datumFormatter.string(from: datum), extraInfo: extraInfo, startTijd: "00:00:00", eindTijd: "00:00:00", patientId: patiëntResponse?.patientId ?? "", artsId: selectedArts)
+        let timeFormatter = DateFormatter()
+        timeFormatter.dateFormat = "HH:mm:ss"
+        let afspraak = AfspraakPush(datum: datumFormatter.string(from: datum), extraInfo: extraInfo, startTijd: timeFormatter.string(from: Date.now), eindTijd: timeFormatter.string(from: Date.now), patientId: patiëntResponse?.patientId ?? "", artsId: selectedArts)
         do {
             try await afspraakRepository.postAfspraak(afspraak: afspraak)
 //            DispatchQueue.main.async {
@@ -73,7 +76,6 @@ class AfspraakViewModel: ObservableObject {
     }
     
     func getAfsprakenByArtsId(id: String) async {
-        selectedArts = id
         do {
             let response = try await afspraakRepository.getAfsprakenByArtsId(id: id)
             DispatchQueue.main.async {

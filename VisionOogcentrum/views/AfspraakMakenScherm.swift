@@ -3,7 +3,7 @@ import SwiftUI
 
 struct AfspraakMakenScherm: View {
     
-    @StateObject private var afspraakViewModel = AfspraakViewModel()
+    @EnvironmentObject var afspraakViewModel: AfspraakViewModel
     @StateObject private var artsViewModel = ArtsViewModel()
     
     @State private var isAfspraakBevestigenSchermPresented = false
@@ -36,6 +36,7 @@ struct AfspraakMakenScherm: View {
                 }.onChange(of: selectedArtsIndex) {
                     Task {
                         selectedArtsId = artsViewModel.artsen[selectedArtsIndex].id
+                        afspraakViewModel.selectedArts = selectedArtsId
                         await afspraakViewModel.getAfsprakenByArtsId(id: selectedArtsId)
                         timeSlots = loadTimeslots()
                     }
@@ -48,6 +49,8 @@ struct AfspraakMakenScherm: View {
                         }
                     }
                     .pickerStyle(.wheel)
+                }.onChange(of: selectedTijdstipIndex) {
+                    afspraakViewModel.selectedDate = timeSlots[selectedTijdstipIndex]
                 }
                     
                 NavigationLink(destination: AfspraakBevestigingView(), isActive: $isAfspraakBevestigenSchermPresented) {

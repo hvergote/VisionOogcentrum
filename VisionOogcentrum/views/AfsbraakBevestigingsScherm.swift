@@ -3,7 +3,7 @@ import SwiftUI
 
 struct AfspraakBevestigingView: View {
     
-    @StateObject private var viewModel = AfspraakViewModel()
+    @EnvironmentObject private var viewModel: AfspraakViewModel
     @State var naam: String = ""
     @State var voornaam: String = ""
     @State var email: String = ""
@@ -53,9 +53,7 @@ struct AfspraakBevestigingView: View {
                     Task {
                         do {
                             _ = try await viewModel.postGebruiker(naam: naam, voornaam: voornaam)
-                            try await Task.sleep(nanoseconds: 2000000000)
                             _ = try await viewModel.postPatiënt(telefoonnummer: telefoonnummer, email: email, straat: straat, huisnummer: huisnummer, stad: stad, postcode: postcode)
-                            try await Task.sleep(nanoseconds: 2000000000)
                             try await viewModel.postAfspraak(datum: viewModel.selectedDate, extraInfo: extraInfo, artsId: viewModel.selectedArts)
                         } catch {
                             print("Error: \(error)")
