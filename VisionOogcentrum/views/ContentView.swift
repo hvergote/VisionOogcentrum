@@ -10,16 +10,7 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         VStack {
-            TabView {
-                HomeView()
-                    .tabItem {
-                        Image(systemName: "house")
-                    }
-                Text("Afspraken")
-                    .tabItem {
-                        Image(systemName: "calendar.badge.plus")
-                    }
-            }
+            HomeView()
             .foregroundStyle(Color("TextColor"))
             .font(.largeTitle)
             .accentColor(.accentColor)
