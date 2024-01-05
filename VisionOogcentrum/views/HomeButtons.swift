@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct HomeButtons: View {
+    @EnvironmentObject var afspraakViewModel: AfspraakViewModel
+
     var body: some View {
         GeometryReader { geometry in
             ZStack {

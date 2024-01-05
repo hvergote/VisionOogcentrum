@@ -19,9 +19,15 @@ class AfspraakViewModel: ObservableObject {
     var selectedDate = Date()
     var selectedArts: String = ""
     @Published var timeSlots: [Date] = []
+    @Published var tijdstip: String = ""
+
 
     init() {
         self.afspraakRepository = NetworkAfspraakRepository()
+    }
+    func sendEmail(datum: String, tijdstip: String, arts: String, ontvanger: String) async {
+        let emailData = EmailData(datum: datum, tijdstip: getTijdstip(date: selectedDate), arts: arts, ontvanger: ontvanger)
+        await afspraakRepository.sendEmail(emailData: emailData)
     }
     
     func postGebruiker(naam: String, voornaam: String) async throws -> GebruikerResponse {
@@ -74,7 +80,6 @@ class AfspraakViewModel: ObservableObject {
             
         }
     }
-    
     func getAfsprakenByArtsId(id: String) async {
         do {
             let response = try await afspraakRepository.getAfsprakenByArtsId(id: id)
@@ -123,5 +128,18 @@ class AfspraakViewModel: ObservableObject {
             currentDate = calendar.date(byAdding: .minute, value: 15, to: currentDate) ?? Date()
         }
         return timeSlots
+    }
+    func getTijdstip(date: Date) -> String {
+        var components = Calendar.current.dateComponents([.hour, .minute, .second], from: date)
+        var uur: String = "\(components.hour ?? 0)"
+        var minuten: String = "\(components.minute ?? 0)"
+        if (components.hour ?? 0 < 10) {
+            uur = "0\(components.hour ?? 0)"
+        }
+        if (components.minute ?? 0 < 10) {
+            minuten = "0\(components.minute ?? 0)"
+        }
+        return "\(uur):\(minuten)"
+        
     }
 }

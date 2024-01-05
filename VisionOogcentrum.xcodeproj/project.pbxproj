@@ -28,6 +28,7 @@
 		FC1AA5322B3C6CB000E6AE23 /* Patiënt.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1AA5312B3C6CB000E6AE23 /* Patiënt.swift */; };
 		FC1AA5342B3C742B00E6AE23 /* Afspraak.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1AA5332B3C742B00E6AE23 /* Afspraak.swift */; };
 		FC1AA5362B3C756700E6AE23 /* AfspraakMakenScherm.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1AA5352B3C756700E6AE23 /* AfspraakMakenScherm.swift */; };
+		FC1AA5382B4598A400E6AE23 /* EmailData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1AA5372B4598A400E6AE23 /* EmailData.swift */; };
 		FCB214352B03FE1700176D22 /* DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB214342B03FE1700176D22 /* DataSource.swift */; };
 		FCB214372B03FE5B00176D22 /* Artikel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB214362B03FE5B00176D22 /* Artikel.swift */; };
 		FCB214392B03FE7800176D22 /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB214382B03FE7800176D22 /* ApiService.swift */; };
@@ -67,6 +68,7 @@
 		FC1AA5312B3C6CB000E6AE23 /* Patiënt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Patiënt.swift"; sourceTree = "<group>"; };
 		FC1AA5332B3C742B00E6AE23 /* Afspraak.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Afspraak.swift; sourceTree = "<group>"; };
 		FC1AA5352B3C756700E6AE23 /* AfspraakMakenScherm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AfspraakMakenScherm.swift; sourceTree = "<group>"; };
+		FC1AA5372B4598A400E6AE23 /* EmailData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailData.swift; sourceTree = "<group>"; };
 		FCB214342B03FE1700176D22 /* DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSource.swift; sourceTree = "<group>"; };
 		FCB214362B03FE5B00176D22 /* Artikel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Artikel.swift; sourceTree = "<group>"; };
 		FCB214382B03FE7800176D22 /* ApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ApiService.swift; path = VisionOogcentrum/models/ApiService.swift; sourceTree = SOURCE_ROOT; };
@@ -170,6 +172,7 @@
 		FCD1C5D22ADEFB3C00CF93EC /* models */ = {
 			isa = PBXGroup;
 			children = (
+				FC1AA5372B4598A400E6AE23 /* EmailData.swift */,
 				FCB214362B03FE5B00176D22 /* Artikel.swift */,
 				FCB214472B0E476C00176D22 /* OogZiekte.swift */,
 				FCB2144D2B0E674700176D22 /* Arts.swift */,
@@ -293,6 +296,7 @@
 				90D0AB912AE1303500CC7A05 /* HomeView.swift in Sources */,
 				FCB214392B03FE7800176D22 /* ApiService.swift in Sources */,
 				FCB2143C2B03FE9700176D22 /* ArtikelViewModel.swift in Sources */,
+				FC1AA5382B4598A400E6AE23 /* EmailData.swift in Sources */,
 				901B761B2B1F6AFE0042A2E0 /* FAQ.swift in Sources */,
 				FCB2144A2B0E4A5500176D22 /* OogZiekteRepository.swift in Sources */,
 				FCB214482B0E476C00176D22 /* OogZiekte.swift in Sources */,
@@ -442,7 +446,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"VisionOogcentrum/Preview Content\"";
-				DEVELOPMENT_TEAM = QH4N3LDSXQ;
+				DEVELOPMENT_TEAM = 3AKN4G6B7A;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = VisionOogcentrum/Info.plist;
@@ -472,7 +476,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"VisionOogcentrum/Preview Content\"";
-				DEVELOPMENT_TEAM = QH4N3LDSXQ;
+				DEVELOPMENT_TEAM = 3AKN4G6B7A;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = VisionOogcentrum/Info.plist;

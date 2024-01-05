@@ -9,9 +9,11 @@ struct AfspraakMakenScherm: View {
     @State private var isAfspraakBevestigenSchermPresented = false
     @State private var chosenDate = Date()
     @State private var selectedArtsIndex = 0
-    @State private var selectedArtsId = ""
+    @State private var selectedArts: Arts = Arts(id: "", gebruiker: Gebruiker(id: "", naam: "", voornaam: ""), profilePicture: "", specialisaties: [], afspraken: [], info: "")
     @State private var selectedTijdstipIndex = 0
     @State var timeSlots: [Date] = []
+
+
     
     var body: some View {
         NavigationView {
@@ -35,9 +37,10 @@ struct AfspraakMakenScherm: View {
                     .pickerStyle(.wheel)
                 }.onChange(of: selectedArtsIndex) {
                     Task {
-                        selectedArtsId = artsViewModel.artsen[selectedArtsIndex].id
-                        afspraakViewModel.selectedArts = selectedArtsId
-                        await afspraakViewModel.getAfsprakenByArtsId(id: selectedArtsId)
+                        selectedArts = artsViewModel.artsen[selectedArtsIndex]
+                        afspraakViewModel.selectedArts = selectedArts.gebruiker.naam
+                        
+                        await afspraakViewModel.getAfsprakenByArtsId(id: selectedArts.id)
                         timeSlots = loadTimeslots()
                     }
                 }
@@ -45,12 +48,13 @@ struct AfspraakMakenScherm: View {
                 Section(header: Text("Kies een tijdstip").font(.body)) {
                     Picker("Tijdstip", selection: $selectedTijdstipIndex) {
                         ForEach(0..<timeSlots.count, id: \.self) { index in
-                            Text(getTijdstip(date: timeSlots[index]))
+                            Text(afspraakViewModel.getTijdstip(date: timeSlots[index]))
                         }
                     }
                     .pickerStyle(.wheel)
                 }.onChange(of: selectedTijdstipIndex) {
                     afspraakViewModel.selectedDate = timeSlots[selectedTijdstipIndex]
+                    afspraakViewModel.tijdstip = afspraakViewModel.getTijdstip(date: timeSlots[selectedTijdstipIndex])
                 }
                     
                 NavigationLink(destination: AfspraakBevestigingView(), isActive: $isAfspraakBevestigenSchermPresented) {
@@ -63,8 +67,8 @@ struct AfspraakMakenScherm: View {
             .onAppear {
                 Task {
                     await artsViewModel.fetchArtsen()
-                    selectedArtsId = artsViewModel.artsen[selectedArtsIndex].id
-                    await afspraakViewModel.getAfsprakenByArtsId(id: selectedArtsId)
+                    selectedArts = artsViewModel.artsen[selectedArtsIndex]
+                    await afspraakViewModel.getAfsprakenByArtsId(id: selectedArts.id)
                     timeSlots = loadTimeslots()
                 }
             }
@@ -106,16 +110,5 @@ struct AfspraakMakenScherm: View {
         return timeSlots
     }
     
-    func getTijdstip(date: Date) -> String {
-        var components = Calendar.current.dateComponents([.hour, .minute, .second], from: date)
-        var uur: String = "\(components.hour ?? 0)"
-        var minuten: String = "\(components.minute ?? 0)"
-        if (components.hour ?? 0 < 10) {
-            uur = "0\(components.hour ?? 0)"
-        }
-        if (components.minute ?? 0 < 10) {
-            minuten = "0\(components.minute ?? 0)"
-        }
-        return "\(uur):\(minuten)"
-    }
+
 }

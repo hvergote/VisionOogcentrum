@@ -12,6 +12,7 @@ protocol AfspraakRepository {
     func postPatiënt(patiënt: Patiënt) async throws -> PatiëntResponse
     func getAfsprakenByArtsId(id: String) async throws -> [Afspraak]
     func postAfspraak(afspraak: AfspraakPush) async throws
+    func sendEmail(emailData: EmailData) async
 }
 
 class NetworkAfspraakRepository: AfspraakRepository {
@@ -26,5 +27,12 @@ class NetworkAfspraakRepository: AfspraakRepository {
     }
     func getAfsprakenByArtsId(id: String) async throws -> [Afspraak] {
         return try await ApiService.shared.getAfsprakenByArtsId(id: id)
+    }
+    func sendEmail(emailData: EmailData) async {
+        do {
+            try await ApiService.shared.sendEmail(emailData: emailData)
+        } catch {
+            print("Error sending email: \(error)")
+        }
     }
 }

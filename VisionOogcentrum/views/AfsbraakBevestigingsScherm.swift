@@ -55,6 +55,10 @@ struct AfspraakBevestigingView: View {
                             _ = try await viewModel.postGebruiker(naam: naam, voornaam: voornaam)
                             _ = try await viewModel.postPatiënt(telefoonnummer: telefoonnummer, email: email, straat: straat, huisnummer: huisnummer, stad: stad, postcode: postcode)
                             try await viewModel.postAfspraak(datum: viewModel.selectedDate, extraInfo: extraInfo, artsId: viewModel.selectedArts)
+                            let dateFormatter = DateFormatter()
+                            dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+                            let formattedDate = dateFormatter.string(from: viewModel.selectedDate)
+                            await viewModel.sendEmail(datum: formattedDate, tijdstip: viewModel.tijdstip, arts: viewModel.selectedArts, ontvanger: email)
                         } catch {
                             print("Error: \(error)")
                         }

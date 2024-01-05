@@ -4,7 +4,7 @@ class ApiService {
     static let shared = ApiService()
     
 //    self signed certificate
-    private let baseURL = "https://a661-2a02-a03f-e70c-5c00-39e3-7f7e-520f-58f1.ngrok-free.app/api"
+    private let baseURL = "https://ea3a-109-137-142-53.ngrok-free.app/api"
 //    private let baseURL = "https://localhost:5001/api"
     
     private let encoder = JSONEncoder()
@@ -12,6 +12,30 @@ class ApiService {
     
     private init() {}
     
+    func sendEmail(emailData: EmailData) async throws {
+        let url = URL(string: "\(baseURL)/mail?Arts=\(emailData.arts)&Datum=\(emailData.datum)&Tijdstip=\(emailData.tijdstip)&Ontvanger=\(emailData.ontvanger)")!
+
+        var request = URLRequest(url: url)
+        request.httpMethod = "POST"
+        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        do {
+            request.httpBody = try encoder.encode(emailData)
+            
+            print("Request URL: \(url)")
+            print("Request Method: \(request.httpMethod ?? "")")
+            print("Request Headers: \(request.allHTTPHeaderFields ?? [:])")
+
+            let (data, response) = try await URLSession.shared.data(for: request)
+
+            if let httpResponse = response as? HTTPURLResponse {
+                print("Response Status Code: \(httpResponse.statusCode)")
+            }
+        } catch {
+            print("Error encoding or sending the request: \(error)")
+            throw error
+        }
+    }
+
     func postGebruiker(gebruikerPush: GebruikerPush) async throws -> GebruikerResponse {
         let url = URL(string: "\(baseURL)/gebruiker")!
         var request = URLRequest(url: url)
@@ -43,7 +67,7 @@ class ApiService {
     func postAfspraak(afspraak: AfspraakPush) async throws {
         print("post afspraak")
         print("datum: \(afspraak.datum)")
-        print("extra info: \(afspraak.extraInfo)")
+        print("extra info: \(String(describing: afspraak.extraInfo))")
         print("startTijd: \(afspraak.startTijd)")
         print("eindTijd: \(afspraak.eindTijd)")
         print("patientId: \(afspraak.patientId)")
